@@ -1,0 +1,267 @@
+[gd_scene format=3 uid="uid://dekkdb3a0eifd"]
+
+[ext_resource type="PackedScene" uid="uid://bjntpxb1c8jxn" path="res://Scenes/Levels/base_level.tscn" id="1_l0dwn"]
+[ext_resource type="PackedScene" uid="uid://cppg5yoxwv0dy" path="res://Scenes/Levels/level_02.tscn" id="2_wf6s8"]
+[ext_resource type="PackedScene" uid="uid://bfmh3fm2de78o" path="res://Scenes/Prefabs/coin.tscn" id="3_dbq10"]
+[ext_resource type="Texture2D" uid="uid://bo1fq1i361iyd" path="res://Assets/Icons/Gemini_Generated_Image_ett0hdett0hdett0.png" id="3_g38v2"]
+[ext_resource type="Texture2D" uid="uid://c3fcswo27bcfl" path="res://Assets/iii/69263b84-9fb1-4bb7-a720-d0089bad7c7e-removebg-preview.png" id="4_g38v2"]
+[ext_resource type="Texture2D" uid="uid://c1ai6v6v8ksj1" path="res://Assets/iii/8e4a1807-4b25-45bf-b48e-7bd552610528-removebg-preview.png" id="5_ge2ro"]
+[ext_resource type="Texture2D" uid="uid://bwfelre2aqt37" path="res://Assets/iii/a368cc63-544c-49e4-ab3a-08da496ad3eb-removebg-preview.png" id="6_flehy"]
+[ext_resource type="Theme" uid="uid://d3eng5cvycmjf" path="res://Scenes/Prefabs/theme.tres" id="6_taws2"]
+[ext_resource type="Texture2D" uid="uid://bsri78sixmhx" path="res://Assets/iii/6757a859-5e8e-4ef8-9cc1-260df08f25f4-removebg-preview.png" id="7_fj6kk"]
+[ext_resource type="PackedScene" uid="uid://b48s52q3f64kl" path="res://Scenes/Actors/monster_mushroom.tscn" id="7_mb1if"]
+[ext_resource type="Texture2D" uid="uid://byjorg5a1yjeq" path="res://Assets/iii/37fc1015-c01e-4cbb-bdf3-5a78422ce425-removebg-preview.png" id="8_uvcnl"]
+[ext_resource type="Texture2D" uid="uid://bes1od2rk6g4y" path="res://Assets/iii/edf38879-f4cc-43e0-8c2b-878c5eb7325e-removebg-preview.png" id="9_6ag6h"]
+[ext_resource type="PackedScene" uid="uid://ek7hxkqp2wff" path="res://Scenes/Actors/Slime.tscn" id="13_ge2ro"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xrivr"]
+size = Vector2(371, 245.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_13qdw"]
+size = Vector2(506.5, 107.50003)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_md046"]
+size = Vector2(1326.25, 107.50003)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7j1n4"]
+size = Vector2(851.125, 71)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l7iqe"]
+size = Vector2(110.5625, 64.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bn014"]
+size = Vector2(213, 76.78125)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g38v2"]
+size = Vector2(523, 76.78125)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_00gvn"]
+size = Vector2(312, 78)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4xlpl"]
+size = Vector2(415, 78)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tfrt2"]
+size = Vector2(531.5, 238)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y1a27"]
+size = Vector2(531.5, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b1lj4"]
+size = Vector2(454.5, 1328.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ge2ro"]
+size = Vector2(454.5, 1287.25)
+
+[node name="BaseLevel" unique_id=1997201631 instance=ExtResource("1_l0dwn")]
+position = Vector2(0, -6)
+
+[node name="LevelFinishDoor" parent="." index="0" unique_id=1788542095]
+position = Vector2(1396, 471)
+next_scene = ExtResource("2_wf6s8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="2" unique_id=267864312]
+z_index = -1
+position = Vector2(-226.75, 573.25)
+scale = Vector2(2.455305, 1.483724)
+texture = ExtResource("3_g38v2")
+metadata/_edit_lock_ = true
+
+[node name="Platform1" type="StaticBody2D" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="3" unique_id=1943126722]
+
+[node name="Sprite2D2" type="Sprite2D" parent="Level/Platform1" index="0" unique_id=40523425]
+position = Vector2(-1519.9999, 1006)
+scale = Vector2(2.734694, 1.4051281)
+texture = ExtResource("4_g38v2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/Platform1" index="1" unique_id=1054488624]
+position = Vector2(-1732.5, 1020.25006)
+scale = Vector2(0.9999999, 1)
+shape = SubResource("RectangleShape2D_xrivr")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Level/Platform1" index="2" unique_id=1695064937]
+position = Vector2(-1379.9998, 1127.25)
+shape = SubResource("RectangleShape2D_13qdw")
+
+[node name="Platform2" type="StaticBody2D" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="4" unique_id=466153065]
+
+[node name="Sprite2D2" type="Sprite2D" parent="Level/Platform2" index="0" unique_id=547487515]
+position = Vector2(-499.00003, 1042.5846)
+scale = Vector2(4.175, 2.1631098)
+texture = ExtResource("5_ge2ro")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Level/Platform2" index="1" unique_id=295713892]
+position = Vector2(-506.125, 1104)
+shape = SubResource("RectangleShape2D_md046")
+
+[node name="Platform3" type="StaticBody2D" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="5" unique_id=834661796]
+
+[node name="Sprite2D2" type="Sprite2D" parent="Level/Platform3" index="0" unique_id=95315148]
+position = Vector2(-474.00003, 674.5)
+scale = Vector2(2.6874998, 1.7096779)
+texture = ExtResource("5_ge2ro")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Level/Platform3" index="1" unique_id=1693505328]
+position = Vector2(-469.5625, 713.5)
+shape = SubResource("RectangleShape2D_7j1n4")
+
+[node name="Platform4" type="StaticBody2D" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="6" unique_id=780639581]
+
+[node name="Sprite2D2" type="Sprite2D" parent="Level/Platform4" index="0" unique_id=1163924380]
+position = Vector2(-1052.5, 786.4839)
+scale = Vector2(1.8593739, 1.6465052)
+texture = ExtResource("6_flehy")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Level/Platform4" index="1" unique_id=1331407619]
+position = Vector2(-1054.2813, 788.25)
+shape = SubResource("RectangleShape2D_l7iqe")
+
+[node name="Platform5" type="StaticBody2D" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="7" unique_id=1479077842]
+
+[node name="Sprite2D2" type="Sprite2D" parent="Level/Platform5" index="0" unique_id=1368776397]
+position = Vector2(-1317.4999, 785.742)
+scale = Vector2(3.578125, 1.844084)
+texture = ExtResource("6_flehy")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Level/Platform5" index="1" unique_id=1494264119]
+position = Vector2(-1315.5, 786.6094)
+shape = SubResource("RectangleShape2D_bn014")
+
+[node name="Platform6" type="StaticBody2D" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="8" unique_id=1124179656]
+
+[node name="Sprite2D2" type="Sprite2D" parent="Level/Platform6" index="0" unique_id=1429734294]
+position = Vector2(461.29807, 898.5)
+scale = Vector2(2.6670194, 1.6117017)
+texture = ExtResource("7_fj6kk")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Level/Platform6" index="1" unique_id=740426478]
+position = Vector2(449.5, 789.4375)
+shape = SubResource("RectangleShape2D_g38v2")
+
+[node name="Platform7" type="StaticBody2D" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="9" unique_id=1317108055]
+
+[node name="Sprite2D2" type="Sprite2D" parent="Level/Platform7" index="0" unique_id=671739821]
+position = Vector2(782.62415, 708)
+scale = Vector2(1.9679987, 1.75)
+texture = ExtResource("8_uvcnl")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Level/Platform7" index="1" unique_id=597959871]
+position = Vector2(783, 709)
+shape = SubResource("RectangleShape2D_00gvn")
+
+[node name="Platform8" type="StaticBody2D" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="10" unique_id=985199503]
+
+[node name="Sprite2D2" type="Sprite2D" parent="Level/Platform8" index="0" unique_id=240310125]
+position = Vector2(989.3121, 637.00006)
+scale = Vector2(1.9839991, 1.75)
+texture = ExtResource("8_uvcnl")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Level/Platform8" index="1" unique_id=2099549124]
+position = Vector2(993, 638)
+shape = SubResource("RectangleShape2D_00gvn")
+
+[node name="Platform9" type="StaticBody2D" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="11" unique_id=1661760498]
+
+[node name="Sprite2D2" type="Sprite2D" parent="Level/Platform9" index="0" unique_id=1505511132]
+position = Vector2(1263.156, 561.0001)
+scale = Vector2(2.6322432, 1.75)
+texture = ExtResource("8_uvcnl")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Level/Platform9" index="1" unique_id=1424661702]
+position = Vector2(1261.5, 563)
+shape = SubResource("RectangleShape2D_4xlpl")
+
+[node name="Platform10" type="StaticBody2D" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="12" unique_id=207032442]
+
+[node name="Sprite2D2" type="Sprite2D" parent="Level/Platform10" index="0" unique_id=1189107682]
+position = Vector2(1197.8992, 1021.50006)
+scale = Vector2(2.0368357, 1.9609368)
+texture = ExtResource("9_6ag6h")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Level/Platform10" index="1" unique_id=557275576]
+position = Vector2(1199.25, 1027)
+shape = SubResource("RectangleShape2D_tfrt2")
+
+[node name="Platform11" type="StaticBody2D" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="13" unique_id=172378939]
+
+[node name="Sprite2D2" type="Sprite2D" parent="Level/Platform11" index="0" unique_id=1069200718]
+position = Vector2(680.49994, 1096.5)
+scale = Vector2(3.3231711, 2.1875007)
+texture = ExtResource("8_uvcnl")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Level/Platform11" index="1" unique_id=1427248644]
+position = Vector2(676, 1098)
+shape = SubResource("RectangleShape2D_y1a27")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="14" unique_id=789811789]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/StaticBody2D" index="0" unique_id=478440914]
+position = Vector2(-2140.75, 675.75)
+shape = SubResource("RectangleShape2D_b1lj4")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="15" unique_id=1507678262]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/StaticBody2D2" index="0" unique_id=1090353650]
+position = Vector2(1688, 641)
+shape = SubResource("RectangleShape2D_ge2ro")
+
+[node name="Player" parent="." index="2" unique_id=850213228]
+position = Vector2(-1846.9998, 893.99994)
+
+[node name="Coin" parent="Coins" parent_id_path=PackedInt32Array(1530662565) index="0" unique_id=251510796 instance=ExtResource("3_dbq10")]
+position = Vector2(257, 625)
+rotation = 0.2617994
+
+[node name="Coin2" parent="Coins" parent_id_path=PackedInt32Array(1530662565) index="1" unique_id=959644230 instance=ExtResource("3_dbq10")]
+position = Vector2(243, 691)
+
+[node name="Coin3" parent="Coins" parent_id_path=PackedInt32Array(1530662565) index="2" unique_id=1453669841 instance=ExtResource("3_dbq10")]
+position = Vector2(1050, 509)
+
+[node name="Coin4" parent="Coins" parent_id_path=PackedInt32Array(1530662565) index="3" unique_id=941174960 instance=ExtResource("3_dbq10")]
+position = Vector2(744, 647)
+
+[node name="Enemy2" parent="Enemies" parent_id_path=PackedInt32Array(1580630701) index="0" unique_id=1482523408 instance=ExtResource("7_mb1if")]
+position = Vector2(-1229, 1046)
+collision_mask = 9
+
+[node name="Enemy3" parent="Enemies" parent_id_path=PackedInt32Array(1580630701) index="1" unique_id=600502477 instance=ExtResource("7_mb1if")]
+position = Vector2(-270, 678)
+collision_mask = 9
+
+[node name="Enemy" parent="Enemies" parent_id_path=PackedInt32Array(1580630701) index="2" unique_id=47849255 instance=ExtResource("13_ge2ro")]
+position = Vector2(-714, 673)
+
+[node name="Label" parent="UserInterface" parent_id_path=PackedInt32Array(1799764374) index="1" unique_id=1103718868]
+anchors_preset = -1
+anchor_top = 0.577
+anchor_bottom = 0.577
+offset_left = -190.0
+offset_top = -18.896027
+offset_right = 167.0
+offset_bottom = 39.103973
+theme_override_colors/font_color = Color(0.5529412, 0.38431373, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 41
+text = "Level 1 ป่าแห่งแสง"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="Text" parent_id_path=PackedInt32Array(416249055) index="0" unique_id=2000774536]
+offset_left = -57.0
+offset_top = 105.0
+offset_right = 285.0
+offset_bottom = 234.0
+theme = ExtResource("6_taws2")
+text = "ด่านที่1
+A D เพื่อเดิน
+Space กระโดด
+X  ยิงบอลไฟ กำจัด  สไลม์"
+
+[node name="Label2" type="Label" parent="Text" parent_id_path=PackedInt32Array(416249055) index="1" unique_id=1040528611]
+offset_left = 985.0
+offset_top = 254.0
+offset_right = 1242.0
+offset_bottom = 305.0
+theme = ExtResource("6_taws2")
+text = "เข้าประตูเพื่อไปด่านต่อไป"

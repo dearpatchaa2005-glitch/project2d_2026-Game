@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://iuxvjvh7yo23"]
+
+[ext_resource type="Script" uid="uid://cayt6jg2g0vq2" path="res://Scenes/Prefabs/locked_door.gd" id="1_1tksd"]
+[ext_resource type="Texture2D" uid="uid://bkb1471s36r5k" path="res://Assets/platformPack_tile048.png" id="2_gxior"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xrivr"]
+size = Vector2(44.936172, 53.106384)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_13qdw"]
+size = Vector2(57, 53)
+
+[node name="LockedDoor" type="StaticBody2D" unique_id=928307710]
+script = ExtResource("1_1tksd")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1772808021]
+position = Vector2(-1.1368684e-13, -1.1368684e-13)
+scale = Vector2(0.734375, 0.734375)
+texture = ExtResource("2_gxior")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=489309061]
+position = Vector2(0.4999999, 3.5000014)
+scale = Vector2(0.73437494, 0.73437494)
+shape = SubResource("RectangleShape2D_xrivr")
+
+[node name="DetectArea" type="Area2D" parent="." unique_id=808750732]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectArea" unique_id=348310722]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_13qdw")

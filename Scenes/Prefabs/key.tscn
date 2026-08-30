@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://ctvmpjbtl6jlw"]
+
+[ext_resource type="Script" uid="uid://bpvatldu2mgtj" path="res://Scenes/Prefabs/key.gd" id="1_0q4ug"]
+[ext_resource type="Texture2D" uid="uid://kcuvn2ogp7sm" path="res://Assets/Icons/Gemini_Generated_Image_lgf1jklgf1jklgf1__2_-removebg-preview.png" id="2_e1eu4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xrivr"]
+size = Vector2(107.8432, 289.21576)
+
+[node name="Key" type="Area2D" unique_id=1489472120]
+script = ExtResource("1_0q4ug")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2047712474]
+position = Vector2(0.9999943, -1.0000057)
+scale = Vector2(0.204, 0.204)
+texture = ExtResource("2_e1eu4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=192658912]
+position = Vector2(0.99999934, -1.0000011)
+scale = Vector2(0.20399985, 0.20399985)
+shape = SubResource("RectangleShape2D_xrivr")

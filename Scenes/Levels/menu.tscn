@@ -1,0 +1,132 @@
+[gd_scene format=3 uid="uid://b6tvaxw54wsq0"]
+
+[ext_resource type="Script" uid="uid://tkynu7pd01lh" path="res://Scenes/Levels/menu.gd" id="1_hq2ph"]
+[ext_resource type="Texture2D" uid="uid://1ay25i0wdihg" path="res://Assets/Icons/cpkku_dark.png" id="2_7pnm7"]
+[ext_resource type="Texture2D" uid="uid://dvnp7r0d14dqv" path="res://Assets/iii/Codex Image Aug 30, 2026, 07_43_26 PM.png" id="2_lli10"]
+[ext_resource type="Texture2D" uid="uid://7bw8blsqt8ab" path="res://icon.svg" id="3_7pnm7"]
+[ext_resource type="Texture2D" uid="uid://cdhtimy1xdt57" path="res://Assets/Icons/afa85a7d-c0f0-4f3c-9340-ccdb25cf6d5d-removebg-preview.png" id="3_ieqbc"]
+[ext_resource type="Texture2D" uid="uid://cdslftcpkw2wg" path="res://Assets/Icons/876e7870-1fbe-4ebe-b455-80febf346b47-removebg-preview.png" id="4_efv3v"]
+[ext_resource type="Texture2D" uid="uid://tw627sglasw6" path="res://Assets/Icons/a259c02c-8159-425f-9d7e-e082e7d4d646-removebg-preview.png" id="5_d0h0r"]
+[ext_resource type="Texture2D" uid="uid://daiiycqgcttox" path="res://Assets/Icons/53c6ca3d-0d53-4ae9-b943-cc35c7bfc1af-removebg-preview.png" id="6_fo0dp"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ieqbc"]
+texture = ExtResource("3_ieqbc")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_efv3v"]
+texture = ExtResource("4_efv3v")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fo0dp"]
+texture = ExtResource("5_d0h0r")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i0m5b"]
+texture = ExtResource("6_fo0dp")
+
+[node name="Node2D" type="Node2D" unique_id=455983868]
+script = ExtResource("1_hq2ph")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2139802716]
+position = Vector2(599.9962, 326.49997)
+scale = Vector2(0.7864633, 0.63769525)
+texture = ExtResource("2_lli10")
+metadata/_edit_lock_ = true
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2114155810]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 29.0
+offset_top = -27.0
+offset_right = 1565.0
+offset_bottom = 997.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_lli10")
+
+[node name="UI" type="Control" parent="." unique_id=2061607031]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 21.0
+offset_top = 158.0
+offset_right = 1162.0
+offset_bottom = 676.0
+
+[node name="btnStart" type="Button" parent="UI" unique_id=843125025]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -85.5
+offset_top = 101.0
+offset_right = 103.5
+offset_bottom = 175.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxTexture_ieqbc")
+
+[node name="btnContinue" type="Button" parent="UI" unique_id=922351197]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -83.5
+offset_top = 177.0
+offset_right = 105.5
+offset_bottom = 255.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxTexture_efv3v")
+disabled = true
+
+[node name="btnOption" type="Button" parent="UI" unique_id=606273451]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -84.5
+offset_top = 260.0
+offset_right = 107.5
+offset_bottom = 337.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.021434566, 0.021434668, 0.021434598, 1)
+theme_override_styles/normal = SubResource("StyleBoxTexture_fo0dp")
+
+[node name="btnCredit" type="Button" parent="UI" unique_id=378335107]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -83.5
+offset_top = 344.0
+offset_right = 100.5
+offset_bottom = 402.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxTexture_i0m5b")
+
+[node name="CpkkuDark" type="Sprite2D" parent="." unique_id=2047758235]
+position = Vector2(1006, 611)
+scale = Vector2(0.61328125, 0.6486486)
+texture = ExtResource("2_7pnm7")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1100858680]
+position = Vector2(1116, 609)
+scale = Vector2(0.35449257, 0.37304696)
+texture = ExtResource("3_7pnm7")
+
+[connection signal="pressed" from="UI/btnStart" to="." method="_on_btn_start_pressed"]
+[connection signal="pressed" from="UI/btnContinue" to="." method="_on_btn_continue_pressed"]
+[connection signal="pressed" from="UI/btnOption" to="." method="_on_btn_option_pressed"]
+[connection signal="pressed" from="UI/btnCredit" to="." method="_on_btn_credit_pressed"]

@@ -1,0 +1,209 @@
+[gd_scene format=3 uid="uid://towe6jtciome"]
+
+[ext_resource type="PackedScene" uid="uid://bjntpxb1c8jxn" path="res://Scenes/Levels/base_level.tscn" id="1_8r7r2"]
+[ext_resource type="PackedScene" uid="uid://b46lxwc5r3dy4" path="res://Scenes/Levels/game_win.tscn" id="2_dcfph"]
+[ext_resource type="Texture2D" uid="uid://b32ixm6qix3cs" path="res://Assets/Icons/Gemini_Generated_Image_ett0hdett0hdett0 (2).png" id="3_oi8m4"]
+[ext_resource type="Texture2D" uid="uid://d2j4ssywlie8a" path="res://Assets/iii/57d7a765-db07-4a88-9e65-de3a60c0f3b6-removebg-preview.png" id="4_hq1kd"]
+[ext_resource type="Texture2D" uid="uid://dtobrbxxg1pfs" path="res://Assets/iii/1a7ef4a4-59fc-4896-9b37-f21306c98308-removebg-preview.png" id="5_ifgmf"]
+[ext_resource type="Texture2D" uid="uid://jyl1576fyb0p" path="res://Assets/iii/c73cbd2b-dfd8-42f1-9df4-7e8af26188d7-removebg-preview.png" id="6_uak2l"]
+[ext_resource type="Texture2D" uid="uid://dibhuu236m6oj" path="res://Assets/iii/c7481255-5707-4b4d-bab7-011fd93a940c-removebg-preview.png" id="7_34g67"]
+[ext_resource type="PackedScene" uid="uid://bfmh3fm2de78o" path="res://Scenes/Prefabs/coin.tscn" id="8_5qict"]
+[ext_resource type="Texture2D" uid="uid://ca124bb7y1m32" path="res://Assets/iii/6a6b7380-b80e-4047-aef6-0f112f25f128-removebg-preview.png" id="9_lshqn"]
+[ext_resource type="PackedScene" uid="uid://cb8e62red7kc0" path="res://Scenes/Prefabs/trap_1.tscn" id="10_5qict"]
+[ext_resource type="PackedScene" uid="uid://bp4l1nlnh8oq1" path="res://Scenes/Prefabs/trap_2.tscn" id="11_lshqn"]
+[ext_resource type="PackedScene" uid="uid://b48s52q3f64kl" path="res://Scenes/Actors/monster_mushroom.tscn" id="13_8tkhk"]
+[ext_resource type="PackedScene" uid="uid://ek7hxkqp2wff" path="res://Scenes/Actors/Slime.tscn" id="14_4kuxc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xrivr"]
+size = Vector2(276.5, 104)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_13qdw"]
+size = Vector2(284.5, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0yyqy"]
+size = Vector2(226.125, 192)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8tkhk"]
+size = Vector2(94, 28)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4kuxc"]
+size = Vector2(516, 55)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2fied"]
+size = Vector2(268, 56.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i4385"]
+size = Vector2(441, 170.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b1lj4"]
+size = Vector2(182, 43.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j8haw"]
+size = Vector2(210, 44)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_njqwk"]
+size = Vector2(151, 697)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_34g67"]
+size = Vector2(151, 1216.4552)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5qict"]
+size = Vector2(151, 823.8595)
+
+[node name="BaseLevel" unique_id=1997201631 instance=ExtResource("1_8r7r2")]
+
+[node name="LevelFinishDoor" parent="." index="0" unique_id=1788542095]
+position = Vector2(1153, 432)
+next_scene = ExtResource("2_dcfph")
+
+[node name="Sprite2D" type="Sprite2D" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="0" unique_id=1709714390]
+position = Vector2(601.00006, 322.50003)
+scale = Vector2(0.8764536, 0.84244806)
+texture = ExtResource("3_oi8m4")
+metadata/_edit_lock_ = true
+
+[node name="Platform1" type="StaticBody2D" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="3" unique_id=371086380]
+
+[node name="Sprite2D" type="Sprite2D" parent="Level/Platform1" index="0" unique_id=978457915]
+position = Vector2(149.87502, 472.8661)
+scale = Vector2(0.89955354, 0.84379375)
+texture = ExtResource("4_hq1kd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/Platform1" index="1" unique_id=1375138748]
+position = Vector2(139.75, 595)
+shape = SubResource("RectangleShape2D_xrivr")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Level/Platform1" index="2" unique_id=23033467]
+position = Vector2(144.75, 393)
+shape = SubResource("RectangleShape2D_13qdw")
+
+[node name="Platform2" type="StaticBody2D" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="4" unique_id=102324696]
+
+[node name="Sprite2D" type="Sprite2D" parent="Level/Platform2" index="0" unique_id=216097701]
+position = Vector2(643.2246, 500.21375)
+scale = Vector2(0.88417345, 0.8421303)
+texture = ExtResource("5_ifgmf")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Level/Platform2" index="1" unique_id=1378419802]
+position = Vector2(608.9375, 513)
+shape = SubResource("RectangleShape2D_0yyqy")
+
+[node name="Platform3" type="StaticBody2D" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="5" unique_id=592003694]
+
+[node name="Sprite2D" type="Sprite2D" parent="Level/Platform3" index="0" unique_id=1774564612]
+position = Vector2(433.03268, 498.39444)
+scale = Vector2(0.8519227, 0.8168985)
+texture = ExtResource("6_uak2l")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Level/Platform3" index="1" unique_id=1357689065]
+position = Vector2(434, 500)
+shape = SubResource("RectangleShape2D_8tkhk")
+
+[node name="Platform4" type="StaticBody2D" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="6" unique_id=1077139186]
+
+[node name="Sprite2D" type="Sprite2D" parent="Level/Platform4" index="0" unique_id=764461789]
+position = Vector2(941.5, 394)
+scale = Vector2(1.057769, 1.0140845)
+texture = ExtResource("7_34g67")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Level/Platform4" index="1" unique_id=1129737800]
+position = Vector2(943, 275.5)
+shape = SubResource("RectangleShape2D_4kuxc")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Level/Platform4" index="2" unique_id=1434446450]
+position = Vector2(1068, 231.25)
+shape = SubResource("RectangleShape2D_2fied")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Level/Platform4" index="3" unique_id=860355350]
+position = Vector2(984.5, 564.875)
+shape = SubResource("RectangleShape2D_i4385")
+
+[node name="Coin" parent="Level/Platform4" index="4" unique_id=251510796 instance=ExtResource("8_5qict")]
+position = Vector2(189, 355)
+
+[node name="Coin2" parent="Level/Platform4" index="5" unique_id=1383736546 instance=ExtResource("8_5qict")]
+position = Vector2(332, 294)
+
+[node name="Coin3" parent="Level/Platform4" index="6" unique_id=1139771653 instance=ExtResource("8_5qict")]
+position = Vector2(429, 453)
+
+[node name="Coin4" parent="Level/Platform4" index="7" unique_id=2116910881 instance=ExtResource("8_5qict")]
+position = Vector2(608, 383)
+
+[node name="Coin5" parent="Level/Platform4" index="8" unique_id=760138899 instance=ExtResource("8_5qict")]
+position = Vector2(1095, 169)
+
+[node name="Coin6" parent="Level/Platform4" index="9" unique_id=54945449 instance=ExtResource("8_5qict")]
+position = Vector2(887, 365)
+
+[node name="Coin7" parent="Level/Platform4" index="10" unique_id=1811476316 instance=ExtResource("8_5qict")]
+position = Vector2(922, 387)
+
+[node name="Platform5" type="StaticBody2D" parent="Level/Platform4" index="11" unique_id=1590073624]
+
+[node name="Sprite2D" type="Sprite2D" parent="Level/Platform4/Platform5" index="0" unique_id=1740862706]
+position = Vector2(464, 253)
+texture = ExtResource("9_lshqn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/Platform4/Platform5" index="1" unique_id=999735965]
+position = Vector2(465, 253.25)
+shape = SubResource("RectangleShape2D_b1lj4")
+
+[node name="Platform6" type="StaticBody2D" parent="Level/Platform4" index="12" unique_id=420179484]
+
+[node name="Sprite2D" type="Sprite2D" parent="Level/Platform4/Platform6" index="0" unique_id=1135612232]
+position = Vector2(334, 358)
+scale = Vector2(1.1041667, 1.1044776)
+texture = ExtResource("9_lshqn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/Platform4/Platform6" index="1" unique_id=1309345830]
+position = Vector2(337, 340)
+shape = SubResource("RectangleShape2D_j8haw")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Level/Platform4/Platform6" index="2" unique_id=706575732]
+position = Vector2(-65.5, 338.5)
+shape = SubResource("RectangleShape2D_njqwk")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Level/Platform4/Platform6" index="3" unique_id=1410625427]
+position = Vector2(596.7272, -73.4705)
+rotation = 1.5689849
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_34g67")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Level/Platform4/Platform6" index="4" unique_id=1482317698]
+position = Vector2(1274.2524, 252.70618)
+rotation = 0.006380879
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_5qict")
+
+[node name="Player" parent="." index="2" unique_id=850213228]
+position = Vector2(73, 373)
+
+[node name="Label" parent="UserInterface" parent_id_path=PackedInt32Array(1799764374) index="1" unique_id=1103718868]
+text = "Level 3  ถ้ำคริสตัล
+"
+
+[node name="Coin" parent="." index="8" unique_id=129373077 instance=ExtResource("8_5qict")]
+position = Vector2(482, 126)
+
+[node name="Trap2" parent="." index="9" unique_id=2016211399 instance=ExtResource("10_5qict")]
+position = Vector2(248, 293)
+
+[node name="Trap3" parent="." index="10" unique_id=1878364380 instance=ExtResource("10_5qict")]
+position = Vector2(818.99994, 155.00002)
+rotation = 3.0892882
+
+[node name="Trap4" parent="." index="11" unique_id=1894763376 instance=ExtResource("11_lshqn")]
+position = Vector2(809, 433)
+
+[node name="Trap5" parent="." index="12" unique_id=1342207429 instance=ExtResource("11_lshqn")]
+position = Vector2(508, 318)
+
+[node name="Enemy" parent="." index="13" unique_id=600502477 instance=ExtResource("13_8tkhk")]
+position = Vector2(716, 249)
+
+[node name="Enemy2" parent="." index="14" unique_id=432862410 instance=ExtResource("14_4kuxc")]
+position = Vector2(938, 474)
+
+[node name="Enemy3" parent="." index="15" unique_id=1134859927 instance=ExtResource("14_4kuxc")]
+position = Vector2(403, 224)

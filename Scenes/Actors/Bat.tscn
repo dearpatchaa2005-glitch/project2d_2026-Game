@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bm5ipmgwgmxa0"]
+
+[ext_resource type="Texture2D" uid="uid://upxy5oi3ucw1" path="res://Assets/Icons/Gemini_Generated_Image_6g8ouo6g8ouo6g8o__1_-removebg-preview.png" id="1_7pptd"]
+[ext_resource type="Script" uid="uid://bcd1ljuyie1n7" path="res://Scenes/Actors/Bat.gd" id="1_75ixt"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xrivr"]
+radius = 54.0
+height = 110.0
+
+[node name="Bat" type="Node" unique_id=1558373402]
+
+[node name="Bat" type="CharacterBody2D" parent="." unique_id=1379170704]
+script = ExtResource("1_75ixt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bat" unique_id=1294574495]
+position = Vector2(138, 29)
+shape = SubResource("CapsuleShape2D_xrivr")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bat" unique_id=1878760017]
+position = Vector2(142, 37)
+scale = Vector2(0.26775002, 0.26775002)
+texture = ExtResource("1_7pptd")
