@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://towe6jtciome"]
 
 [ext_resource type="PackedScene" uid="uid://bjntpxb1c8jxn" path="res://Scenes/Levels/base_level.tscn" id="1_8r7r2"]
-[ext_resource type="PackedScene" uid="uid://b46lxwc5r3dy4" path="res://Scenes/Levels/game_win.tscn" id="2_dcfph"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/level_04.tscn" id="2_dcfph"]
 [ext_resource type="Texture2D" uid="uid://b32ixm6qix3cs" path="res://Assets/Icons/Gemini_Generated_Image_ett0hdett0hdett0 (2).png" id="3_oi8m4"]
 [ext_resource type="Texture2D" uid="uid://d2j4ssywlie8a" path="res://Assets/iii/57d7a765-db07-4a88-9e65-de3a60c0f3b6-removebg-preview.png" id="4_hq1kd"]
 [ext_resource type="Texture2D" uid="uid://dtobrbxxg1pfs" path="res://Assets/iii/1a7ef4a4-59fc-4896-9b37-f21306c98308-removebg-preview.png" id="5_ifgmf"]

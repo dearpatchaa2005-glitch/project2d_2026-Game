@@ -4,13 +4,12 @@
 [ext_resource type="Texture2D" uid="uid://ddv4aoj15q5pe" path="res://Assets/Icons/icons8-audio-48.png" id="2_audio"]
 [ext_resource type="Texture2D" uid="uid://i80o4wno5dnx" path="res://Assets/Icons/icons8-mute-48.png" id="3_mute"]
 [ext_resource type="Texture2D" uid="uid://ctp5xew3mi5hs" path="res://Assets/Icons/icons8-music-48.png" id="4_music"]
-[ext_resource type="Texture2D" uid="uid://c14r70talvlty" path="res://Assets/Icons/icons8-arrow-left-50.png" id="5_left"]
 [ext_resource type="Texture2D" uid="uid://dbdk5x30xx2t4" path="res://Assets/Icons/icons8-up-50.png" id="6_up"]
 [ext_resource type="Texture2D" uid="uid://m44t4aut6o62" path="res://Assets/Icons/icons8-arrow-right-50.png" id="7_right"]
 [ext_resource type="Texture2D" uid="uid://c6krhy0uwdp4u" path="res://Assets/Icons/Gemini_Generated_Image_gwjnk5gwjnk5gwjn-removebg-preview.png" id="8_shoot"]
 [ext_resource type="Texture2D" uid="uid://2wfiy300hbbt" path="res://Assets/Icons/icons8-save-50.png" id="9_save"]
 [ext_resource type="Texture2D" uid="uid://c14r70talvlty" path="res://Assets/Icons/icons8-arrow-left-50.png" id="10_left"]
-[ext_resource type="Texture2D" path="res://Assets/Icons/icons8-heart-48.png" id="11_heart"]
+[ext_resource type="Texture2D" uid="uid://cs52s37v04q41" path="res://Assets/Icons/icons8-heart-48.png" id="11_heart"]
 
 [sub_resource type="StyleBoxFlat" id="Panel"]
 bg_color = Color(0.035, 0.055, 0.075, 0.94)
@@ -38,18 +37,6 @@ corner_radius_top_right = 50
 corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
 
-[sub_resource type="StyleBoxFlat" id="ButtonHover"]
-bg_color = Color(0.12, 0.14, 0.16, 0.88)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(0.75, 0.78, 0.82, 0.95)
-corner_radius_top_left = 50
-corner_radius_top_right = 50
-corner_radius_bottom_right = 50
-corner_radius_bottom_left = 50
-
 [sub_resource type="StyleBoxFlat" id="ButtonPressed"]
 bg_color = Color(0.22, 0.24, 0.27, 0.95)
 border_width_left = 3
@@ -57,6 +44,18 @@ border_width_top = 3
 border_width_right = 3
 border_width_bottom = 3
 border_color = Color(0.9, 0.92, 0.95, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="ButtonHover"]
+bg_color = Color(0.12, 0.14, 0.16, 0.88)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.75, 0.78, 0.82, 0.95)
 corner_radius_top_left = 50
 corner_radius_top_right = 50
 corner_radius_bottom_right = 50
@@ -81,18 +80,11 @@ corner_radius_top_right = 7
 corner_radius_bottom_right = 7
 corner_radius_bottom_left = 7
 
-[sub_resource type="StyleBoxFlat" id="EnergyFillLow"]
-bg_color = Color(0.9, 0.36, 0.12, 1)
-corner_radius_top_left = 7
-corner_radius_top_right = 7
-corner_radius_bottom_right = 7
-corner_radius_bottom_left = 7
-
 [node name="UserInterface" type="CanvasLayer" unique_id=1799764374]
 layer = 20
 script = ExtResource("1_ui")
 
-[node name="GameUI" type="Control" parent="."]
+[node name="GameUI" type="Control" parent="." unique_id=816443205]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -101,7 +93,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="TopBar" type="Control" parent="GameUI"]
+[node name="TopBar" type="Control" parent="GameUI" unique_id=1511031672]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -109,7 +101,7 @@ offset_bottom = 100.0
 grow_horizontal = 2
 mouse_filter = 2
 
-[node name="StatusPanel" type="Panel" parent="GameUI/TopBar"]
+[node name="StatusPanel" type="Panel" parent="GameUI/TopBar" unique_id=216008262]
 layout_mode = 0
 offset_left = 20.0
 offset_top = 16.0
@@ -117,7 +109,7 @@ offset_right = 430.0
 offset_bottom = 86.0
 theme_override_styles/panel = SubResource("Panel")
 
-[node name="Heart1" type="TextureRect" parent="GameUI/TopBar/StatusPanel"]
+[node name="Heart1" type="TextureRect" parent="GameUI/TopBar/StatusPanel" unique_id=1125391400]
 layout_mode = 0
 offset_left = 15.0
 offset_top = 12.0
@@ -127,7 +119,7 @@ texture = ExtResource("11_heart")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Heart2" type="TextureRect" parent="GameUI/TopBar/StatusPanel"]
+[node name="Heart2" type="TextureRect" parent="GameUI/TopBar/StatusPanel" unique_id=423460267]
 layout_mode = 0
 offset_left = 53.0
 offset_top = 12.0
@@ -137,7 +129,7 @@ texture = ExtResource("11_heart")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Heart3" type="TextureRect" parent="GameUI/TopBar/StatusPanel"]
+[node name="Heart3" type="TextureRect" parent="GameUI/TopBar/StatusPanel" unique_id=392316966]
 layout_mode = 0
 offset_left = 91.0
 offset_top = 12.0
@@ -147,7 +139,7 @@ texture = ExtResource("11_heart")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Heart4" type="TextureRect" parent="GameUI/TopBar/StatusPanel"]
+[node name="Heart4" type="TextureRect" parent="GameUI/TopBar/StatusPanel" unique_id=1239702958]
 visible = false
 layout_mode = 0
 offset_left = 129.0
@@ -158,7 +150,7 @@ texture = ExtResource("11_heart")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Heart5" type="TextureRect" parent="GameUI/TopBar/StatusPanel"]
+[node name="Heart5" type="TextureRect" parent="GameUI/TopBar/StatusPanel" unique_id=899041415]
 visible = false
 layout_mode = 0
 offset_left = 167.0
@@ -169,7 +161,7 @@ texture = ExtResource("11_heart")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Divider1" type="ColorRect" parent="GameUI/TopBar/StatusPanel"]
+[node name="Divider1" type="ColorRect" parent="GameUI/TopBar/StatusPanel" unique_id=961971388]
 layout_mode = 0
 offset_left = 210.0
 offset_top = 12.0
@@ -177,7 +169,7 @@ offset_right = 212.0
 offset_bottom = 58.0
 color = Color(0.3, 0.33, 0.37, 0.8)
 
-[node name="CrystalIcon" type="Label" parent="GameUI/TopBar/StatusPanel"]
+[node name="CrystalIcon" type="Label" parent="GameUI/TopBar/StatusPanel" unique_id=1725344237]
 layout_mode = 0
 offset_left = 226.0
 offset_top = 14.0
@@ -187,7 +179,7 @@ theme_override_colors/font_color = Color(0.25, 0.75, 1, 1)
 theme_override_font_sizes/font_size = 30
 text = "♦"
 
-[node name="CrystalLabel" type="Label" parent="GameUI/TopBar/StatusPanel"]
+[node name="CrystalLabel" type="Label" parent="GameUI/TopBar/StatusPanel" unique_id=1695292240]
 layout_mode = 0
 offset_left = 263.0
 offset_top = 17.0
@@ -197,7 +189,7 @@ theme_override_colors/font_color = Color(0.95, 0.97, 1, 1)
 theme_override_font_sizes/font_size = 24
 text = "0/3"
 
-[node name="CoinIcon" type="Label" parent="GameUI/TopBar/StatusPanel"]
+[node name="CoinIcon" type="Label" parent="GameUI/TopBar/StatusPanel" unique_id=1756170612]
 layout_mode = 0
 offset_left = 322.0
 offset_top = 14.0
@@ -207,7 +199,7 @@ theme_override_colors/font_color = Color(1, 0.78, 0.12, 1)
 theme_override_font_sizes/font_size = 28
 text = "●"
 
-[node name="CoinLabel" type="Label" parent="GameUI/TopBar/StatusPanel"]
+[node name="CoinLabel" type="Label" parent="GameUI/TopBar/StatusPanel" unique_id=762509763]
 layout_mode = 0
 offset_left = 358.0
 offset_top = 17.0
@@ -217,7 +209,7 @@ theme_override_colors/font_color = Color(0.95, 0.97, 1, 1)
 theme_override_font_sizes/font_size = 24
 text = "0"
 
-[node name="btnSave" type="Button" parent="GameUI/TopBar"]
+[node name="btnSave" type="Button" parent="GameUI/TopBar" unique_id=888213497]
 layout_mode = 0
 offset_left = 450.0
 offset_top = 18.0
@@ -227,7 +219,7 @@ focus_mode = 0
 icon = ExtResource("9_save")
 flat = true
 
-[node name="btnSound" type="Button" parent="GameUI/TopBar"]
+[node name="btnSound" type="Button" parent="GameUI/TopBar" unique_id=294458587]
 layout_mode = 0
 offset_left = 520.0
 offset_top = 18.0
@@ -236,19 +228,19 @@ offset_bottom = 78.0
 focus_mode = 0
 flat = true
 
-[node name="on" type="TextureRect" parent="GameUI/TopBar/btnSound"]
+[node name="on" type="TextureRect" parent="GameUI/TopBar/btnSound" unique_id=834306607]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("2_audio")
 expand_mode = 1
 stretch_mode = 5
-mouse_filter = 2
 
-[node name="mute" type="TextureRect" parent="GameUI/TopBar/btnSound"]
+[node name="mute" type="TextureRect" parent="GameUI/TopBar/btnSound" unique_id=790542551]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -256,12 +248,12 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("3_mute")
 expand_mode = 1
 stretch_mode = 5
-mouse_filter = 2
 
-[node name="btnMusic" type="Button" parent="GameUI/TopBar"]
+[node name="btnMusic" type="Button" parent="GameUI/TopBar" unique_id=1342493977]
 layout_mode = 0
 offset_left = 590.0
 offset_top = 18.0
@@ -270,19 +262,19 @@ offset_bottom = 78.0
 focus_mode = 0
 flat = true
 
-[node name="on" type="TextureRect" parent="GameUI/TopBar/btnMusic"]
+[node name="on" type="TextureRect" parent="GameUI/TopBar/btnMusic" unique_id=1018911703]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("4_music")
 expand_mode = 1
 stretch_mode = 5
-mouse_filter = 2
 
-[node name="mute" type="TextureRect" parent="GameUI/TopBar/btnMusic"]
+[node name="mute" type="TextureRect" parent="GameUI/TopBar/btnMusic" unique_id=1953480705]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -290,12 +282,12 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("3_mute")
 expand_mode = 1
 stretch_mode = 5
-mouse_filter = 2
 
-[node name="btnExit" type="Button" parent="GameUI/TopBar"]
+[node name="btnExit" type="Button" parent="GameUI/TopBar" unique_id=1723540760]
 layout_mode = 0
 offset_left = 660.0
 offset_top = 18.0
@@ -307,7 +299,7 @@ theme_override_font_sizes/font_size = 20
 text = "EXIT"
 flat = true
 
-[node name="BottomBar" type="Control" parent="GameUI"]
+[node name="BottomBar" type="Control" parent="GameUI" unique_id=2138316246]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -316,110 +308,67 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="btnLeft" type="Button" parent="GameUI/BottomBar"]
+[node name="btnLeft" type="Button" parent="GameUI/BottomBar" unique_id=1937873997]
 layout_mode = 0
 offset_left = 35.0
-offset_top = 560.0
+offset_top = 508.0
 offset_right = 145.0
-offset_bottom = 670.0
+offset_bottom = 618.0
 focus_mode = 0
-icon = ExtResource("5_left")
-flat = false
-expand_icon = true
 theme_override_styles/normal = SubResource("ButtonNormal")
-theme_override_styles/hover = SubResource("ButtonHover")
 theme_override_styles/pressed = SubResource("ButtonPressed")
+theme_override_styles/hover = SubResource("ButtonHover")
+icon = ExtResource("10_left")
+expand_icon = true
 
-[node name="btnRight" type="Button" parent="GameUI/BottomBar"]
+[node name="btnRight" type="Button" parent="GameUI/BottomBar" unique_id=240359138]
 layout_mode = 0
-offset_left = 165.0
-offset_top = 560.0
-offset_right = 275.0
-offset_bottom = 670.0
+offset_left = 166.0
+offset_top = 508.0
+offset_right = 276.0
+offset_bottom = 618.0
 focus_mode = 0
+theme_override_styles/normal = SubResource("ButtonNormal")
+theme_override_styles/pressed = SubResource("ButtonPressed")
+theme_override_styles/hover = SubResource("ButtonHover")
 icon = ExtResource("7_right")
-flat = false
 expand_icon = true
-theme_override_styles/normal = SubResource("ButtonNormal")
-theme_override_styles/hover = SubResource("ButtonHover")
-theme_override_styles/pressed = SubResource("ButtonPressed")
 
-[node name="btnShoot" type="Button" parent="GameUI/BottomBar"]
-layout_mode = 0
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -285.0
-offset_top = 530.0
-offset_right = -175.0
-offset_bottom = 640.0
-grow_horizontal = 0
-focus_mode = 0
-icon = ExtResource("8_shoot")
-flat = false
-expand_icon = true
-theme_override_styles/normal = SubResource("ButtonNormal")
-theme_override_styles/hover = SubResource("ButtonHover")
-theme_override_styles/pressed = SubResource("ButtonPressed")
-
-[node name="btnUp" type="Button" parent="GameUI/BottomBar"]
-layout_mode = 0
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -150.0
-offset_top = 450.0
-offset_right = -40.0
-offset_bottom = 560.0
-grow_horizontal = 0
-focus_mode = 0
-icon = ExtResource("6_up")
-flat = false
-expand_icon = true
-theme_override_styles/normal = SubResource("ButtonNormal")
-theme_override_styles/hover = SubResource("ButtonHover")
-theme_override_styles/pressed = SubResource("ButtonPressed")
-
-[node name="EnergyBar" type="ProgressBar" parent="GameUI"]
-layout_mode = 0
-offset_left = 400.0
-offset_top = 625.0
-offset_right = 800.0
-offset_bottom = 675.0
-value = 100.0
-show_percentage = false
-theme_override_styles/background = SubResource("EnergyBG")
-theme_override_styles/fill = SubResource("EnergyFill")
-
-[node name="EnergyIcon" type="Label" parent="GameUI/EnergyBar"]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 4.0
-offset_right = 42.0
-offset_bottom = 43.0
-theme_override_colors/font_color = Color(0.1, 0.9, 1, 1)
-theme_override_font_sizes/font_size = 28
-text = "ϟ"
-mouse_filter = 2
-
-[node name="EnergyLabel" type="Label" parent="GameUI/EnergyBar"]
+[node name="btnShoot" type="Button" parent="GameUI/BottomBar" unique_id=1861041407]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = 1
+anchor_left = 1.0
 anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 35.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 0.8)
-theme_override_constants/outline_size = 5
-theme_override_font_sizes/font_size = 20
-text = "100/100"
-horizontal_alignment = 1
-vertical_alignment = 1
-mouse_filter = 2
+offset_left = -288.0
+offset_top = 511.0
+offset_right = -178.0
+offset_bottom = 621.0
+grow_horizontal = 0
+focus_mode = 0
+theme_override_styles/normal = SubResource("ButtonNormal")
+theme_override_styles/pressed = SubResource("ButtonPressed")
+theme_override_styles/hover = SubResource("ButtonHover")
+icon = ExtResource("8_shoot")
+expand_icon = true
 
-[node name="AlertLabel" type="Label" parent="GameUI/BottomBar"]
+[node name="btnUp" type="Button" parent="GameUI/BottomBar" unique_id=1692552249]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -158.0
+offset_top = 433.0
+offset_right = -48.0
+offset_bottom = 543.0
+grow_horizontal = 0
+focus_mode = 0
+theme_override_styles/normal = SubResource("ButtonNormal")
+theme_override_styles/pressed = SubResource("ButtonPressed")
+theme_override_styles/hover = SubResource("ButtonHover")
+icon = ExtResource("6_up")
+expand_icon = true
+
+[node name="AlertLabel" type="Label" parent="GameUI/BottomBar" unique_id=399387861]
 visible = false
 layout_mode = 0
 offset_left = 480.0
@@ -433,15 +382,55 @@ theme_override_font_sizes/font_size = 24
 text = "Alert"
 horizontal_alignment = 1
 
+[node name="EnergyBar" type="ProgressBar" parent="GameUI" unique_id=86577263]
+layout_mode = 0
+offset_left = 402.0
+offset_top = 560.0
+offset_right = 802.0
+offset_bottom = 610.0
+theme_override_styles/background = SubResource("EnergyBG")
+theme_override_styles/fill = SubResource("EnergyFill")
+value = 100.0
+show_percentage = false
+
+[node name="EnergyIcon" type="Label" parent="GameUI/EnergyBar" unique_id=1092472242]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 4.0
+offset_right = 42.0
+offset_bottom = 43.0
+theme_override_colors/font_color = Color(0.1, 0.9, 1, 1)
+theme_override_font_sizes/font_size = 28
+text = "ϟ"
+
+[node name="EnergyLabel" type="Label" parent="GameUI/EnergyBar" unique_id=2146835743]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 2.0
+offset_right = -15.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.8)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 20
+text = "100/100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="pressed" from="GameUI/TopBar/btnSave" to="." method="_on_btn_save_pressed"]
 [connection signal="pressed" from="GameUI/TopBar/btnSound" to="." method="_on_btn_sound_pressed"]
 [connection signal="pressed" from="GameUI/TopBar/btnMusic" to="." method="_on_btn_music_pressed"]
 [connection signal="pressed" from="GameUI/TopBar/btnExit" to="." method="_on_btn_exit_pressed"]
 [connection signal="button_down" from="GameUI/BottomBar/btnLeft" to="." method="_on_btn_left_pressed"]
 [connection signal="button_up" from="GameUI/BottomBar/btnLeft" to="." method="_on_btn_left_released"]
-[connection signal="button_down" from="GameUI/BottomBar/btnUp" to="." method="_on_btn_up_pressed"]
-[connection signal="button_up" from="GameUI/BottomBar/btnUp" to="." method="_on_btn_up_released"]
 [connection signal="button_down" from="GameUI/BottomBar/btnRight" to="." method="_on_btn_right_pressed"]
 [connection signal="button_up" from="GameUI/BottomBar/btnRight" to="." method="_on_btn_right_released"]
 [connection signal="button_down" from="GameUI/BottomBar/btnShoot" to="." method="_on_btn_shoot_button_down"]
 [connection signal="button_up" from="GameUI/BottomBar/btnShoot" to="." method="_on_btn_shoot_button_up"]
+[connection signal="button_down" from="GameUI/BottomBar/btnUp" to="." method="_on_btn_up_pressed"]
+[connection signal="button_up" from="GameUI/BottomBar/btnUp" to="." method="_on_btn_up_released"]

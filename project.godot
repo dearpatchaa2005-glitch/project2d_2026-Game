@@ -22,7 +22,7 @@ run/main_scene="uid://towe6jtciome"
 config/features=PackedStringArray("4.7", "Forward Plus")
 boot_splash/stretch_mode=4
 boot_splash/image="res://Assets/Splash/splash.png"
-config/icon="uid://xeh8sn4tfl0r"
+config/icon="res://icon.svg"
 boot_splash/minimum_display_time=500
 
 [audio]
