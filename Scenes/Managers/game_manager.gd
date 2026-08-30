@@ -28,7 +28,9 @@ func get_stat(key:String,default=0):
 	
 # Adds 1 to score variable
 func add_score(v=1):
-	player_stats.data_add("score",v)
+	# Coin pickups contribute to both the score and the coin counter.
+	player_stats.data_add("score", v)
+	player_stats.data_add("coins", v)
 
 # Loads next level
 func load_next_level(next_scene : PackedScene):

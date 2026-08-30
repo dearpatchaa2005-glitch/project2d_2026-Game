@@ -1,226 +1,442 @@
 [gd_scene format=3 uid="uid://cdwabmqtlxr1y"]
 
-[ext_resource type="Script" uid="uid://domyi75bwl5ad" path="res://Scenes/Levels/game_ui.gd" id="1_6pfiu"]
-[ext_resource type="FontFile" uid="uid://bnwueb1457rus" path="res://Assets/Fonts/Star Choco.ttf" id="3_4yslr"]
-[ext_resource type="Theme" uid="uid://d3eng5cvycmjf" path="res://Scenes/Prefabs/theme.tres" id="4_fjdxc"]
-[ext_resource type="Texture2D" uid="uid://2wfiy300hbbt" path="res://Assets/Icons/icons8-save-50.png" id="5_fpocv"]
-[ext_resource type="Texture2D" uid="uid://ddv4aoj15q5pe" path="res://Assets/Icons/icons8-audio-48.png" id="6_da6bi"]
-[ext_resource type="Texture2D" uid="uid://i80o4wno5dnx" path="res://Assets/Icons/icons8-mute-48.png" id="7_qwp1t"]
-[ext_resource type="Texture2D" uid="uid://ctp5xew3mi5hs" path="res://Assets/Icons/icons8-music-48.png" id="7_r4nak"]
-[ext_resource type="Texture2D" uid="uid://c14r70talvlty" path="res://Assets/Icons/icons8-arrow-left-50.png" id="8_fouhp"]
-[ext_resource type="Texture2D" uid="uid://djscvie6h1kd5" path="res://Assets/Icons/icons8-cancel-48.png" id="8_nvrsl"]
-[ext_resource type="Texture2D" uid="uid://dbdk5x30xx2t4" path="res://Assets/Icons/icons8-up-50.png" id="9_qi3vf"]
-[ext_resource type="Texture2D" uid="uid://m44t4aut6o62" path="res://Assets/Icons/icons8-arrow-right-50.png" id="10_ioybj"]
-[ext_resource type="PackedScene" uid="uid://puc4l62gx6et" path="res://Scenes/Prefabs/button_exit.tscn" id="14_b47np"]
-[ext_resource type="Texture2D" uid="uid://c6krhy0uwdp4u" path="res://Assets/Icons/Gemini_Generated_Image_gwjnk5gwjnk5gwjn-removebg-preview.png" id="14_v3j5j"]
+[ext_resource type="Script" uid="uid://domyi75bwl5ad" path="res://Scenes/Levels/game_ui.gd" id="1_ui"]
+[ext_resource type="Texture2D" uid="uid://ddv4aoj15q5pe" path="res://Assets/Icons/icons8-audio-48.png" id="2_audio"]
+[ext_resource type="Texture2D" uid="uid://i80o4wno5dnx" path="res://Assets/Icons/icons8-mute-48.png" id="3_mute"]
+[ext_resource type="Texture2D" uid="uid://ctp5xew3mi5hs" path="res://Assets/Icons/icons8-music-48.png" id="4_music"]
+[ext_resource type="Texture2D" uid="uid://c14r70talvlty" path="res://Assets/Icons/icons8-arrow-left-50.png" id="5_left"]
+[ext_resource type="Texture2D" uid="uid://dbdk5x30xx2t4" path="res://Assets/Icons/icons8-up-50.png" id="6_up"]
+[ext_resource type="Texture2D" uid="uid://m44t4aut6o62" path="res://Assets/Icons/icons8-arrow-right-50.png" id="7_right"]
+[ext_resource type="Texture2D" uid="uid://c6krhy0uwdp4u" path="res://Assets/Icons/Gemini_Generated_Image_gwjnk5gwjnk5gwjn-removebg-preview.png" id="8_shoot"]
+[ext_resource type="Texture2D" uid="uid://2wfiy300hbbt" path="res://Assets/Icons/icons8-save-50.png" id="9_save"]
+[ext_resource type="Texture2D" uid="uid://c14r70talvlty" path="res://Assets/Icons/icons8-arrow-left-50.png" id="10_left"]
+[ext_resource type="Texture2D" path="res://Assets/Icons/icons8-heart-48.png" id="11_heart"]
 
-[sub_resource type="Animation" id="Animation_3cagf"]
-length = 0.001
+[sub_resource type="StyleBoxFlat" id="Panel"]
+bg_color = Color(0.035, 0.055, 0.075, 0.94)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.35, 0.38, 0.42, 0.95)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+shadow_color = Color(0, 0, 0, 0.45)
+shadow_size = 5
 
-[sub_resource type="Animation" id="Animation_5vjlm"]
-resource_name = "welcome"
-length = 5.0
-loop_mode = 2
+[sub_resource type="StyleBoxFlat" id="ButtonNormal"]
+bg_color = Color(0.035, 0.045, 0.055, 0.72)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.45, 0.47, 0.5, 0.8)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_6pfiu"]
-_data = {
-&"RESET": SubResource("Animation_3cagf"),
-&"welcome": SubResource("Animation_5vjlm")
-}
+[sub_resource type="StyleBoxFlat" id="ButtonHover"]
+bg_color = Color(0.12, 0.14, 0.16, 0.88)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.75, 0.78, 0.82, 0.95)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="ButtonPressed"]
+bg_color = Color(0.22, 0.24, 0.27, 0.95)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.9, 0.92, 0.95, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="EnergyBG"]
+bg_color = Color(0.035, 0.055, 0.075, 0.95)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.3, 0.33, 0.37, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="EnergyFill"]
+bg_color = Color(0.04, 0.58, 0.9, 1)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+
+[sub_resource type="StyleBoxFlat" id="EnergyFillLow"]
+bg_color = Color(0.9, 0.36, 0.12, 1)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
 
 [node name="UserInterface" type="CanvasLayer" unique_id=1799764374]
-script = ExtResource("1_6pfiu")
+layer = 20
+script = ExtResource("1_ui")
 
-[node name="GameUI" type="Control" parent="." unique_id=1771747675]
+[node name="GameUI" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-metadata/_edit_lock_ = true
+mouse_filter = 2
 
-[node name="TopBar" type="Control" parent="GameUI" unique_id=1540824613]
-unique_name_in_owner = true
+[node name="TopBar" type="Control" parent="GameUI"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 84.0
+offset_bottom = 100.0
 grow_horizontal = 2
+mouse_filter = 2
 
-[node name="ScoreLabel" type="Label" parent="GameUI/TopBar" unique_id=1067951808]
-unique_name_in_owner = true
+[node name="StatusPanel" type="Panel" parent="GameUI/TopBar"]
 layout_mode = 0
-offset_left = 300.0
-offset_top = 13.0
-offset_right = 470.0
-offset_bottom = 55.0
-theme_override_colors/font_color = Color(0.910156, 0.730469, 0, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("3_4yslr")
-theme_override_font_sizes/font_size = 32
-text = "CRYSTAL: 3"
+offset_left = 20.0
+offset_top = 16.0
+offset_right = 430.0
+offset_bottom = 86.0
+theme_override_styles/panel = SubResource("Panel")
 
-[node name="HeartLabel" type="Label" parent="GameUI/TopBar" unique_id=2048298780]
-unique_name_in_owner = true
+[node name="Heart1" type="TextureRect" parent="GameUI/TopBar/StatusPanel"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 30.0
-theme_override_font_sizes/font_size = 35
-text = "❤️❤️❤️"
+offset_left = 15.0
+offset_top = 12.0
+offset_right = 55.0
+offset_bottom = 52.0
+texture = ExtResource("11_heart")
+expand_mode = 1
+stretch_mode = 5
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="GameUI/TopBar" unique_id=1609764920]
-libraries/ = SubResource("AnimationLibrary_6pfiu")
-autoplay = &"welcome"
+[node name="Heart2" type="TextureRect" parent="GameUI/TopBar/StatusPanel"]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 12.0
+offset_right = 93.0
+offset_bottom = 52.0
+texture = ExtResource("11_heart")
+expand_mode = 1
+stretch_mode = 5
 
-[node name="btnSave" type="Button" parent="GameUI/TopBar" unique_id=196490803]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -195.0
-offset_top = 5.0
-offset_right = -131.0
-offset_bottom = 63.0
-grow_horizontal = 0
-focus_mode = 0
-icon = ExtResource("5_fpocv")
-flat = true
+[node name="Heart3" type="TextureRect" parent="GameUI/TopBar/StatusPanel"]
+layout_mode = 0
+offset_left = 91.0
+offset_top = 12.0
+offset_right = 131.0
+offset_bottom = 52.0
+texture = ExtResource("11_heart")
+expand_mode = 1
+stretch_mode = 5
 
-[node name="btnSound" type="Button" parent="GameUI/TopBar" unique_id=167811641]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -255.0
-offset_top = 5.0
-offset_right = -197.0
-offset_bottom = 63.0
-grow_horizontal = 0
-focus_mode = 0
-flat = true
-
-[node name="on" type="Sprite2D" parent="GameUI/TopBar/btnSound" unique_id=532436065]
-position = Vector2(32, 29)
-texture = ExtResource("6_da6bi")
-
-[node name="mute" type="Sprite2D" parent="GameUI/TopBar/btnSound" unique_id=1162638177]
+[node name="Heart4" type="TextureRect" parent="GameUI/TopBar/StatusPanel"]
 visible = false
-position = Vector2(32, 29)
-texture = ExtResource("7_qwp1t")
+layout_mode = 0
+offset_left = 129.0
+offset_top = 12.0
+offset_right = 169.0
+offset_bottom = 52.0
+texture = ExtResource("11_heart")
+expand_mode = 1
+stretch_mode = 5
 
-[node name="btnMusic" type="Button" parent="GameUI/TopBar" unique_id=797138490]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -320.0
-offset_top = 5.0
-offset_right = -257.0
-offset_bottom = 63.0
-grow_horizontal = 0
+[node name="Heart5" type="TextureRect" parent="GameUI/TopBar/StatusPanel"]
+visible = false
+layout_mode = 0
+offset_left = 167.0
+offset_top = 12.0
+offset_right = 207.0
+offset_bottom = 52.0
+texture = ExtResource("11_heart")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Divider1" type="ColorRect" parent="GameUI/TopBar/StatusPanel"]
+layout_mode = 0
+offset_left = 210.0
+offset_top = 12.0
+offset_right = 212.0
+offset_bottom = 58.0
+color = Color(0.3, 0.33, 0.37, 0.8)
+
+[node name="CrystalIcon" type="Label" parent="GameUI/TopBar/StatusPanel"]
+layout_mode = 0
+offset_left = 226.0
+offset_top = 14.0
+offset_right = 257.0
+offset_bottom = 51.0
+theme_override_colors/font_color = Color(0.25, 0.75, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "♦"
+
+[node name="CrystalLabel" type="Label" parent="GameUI/TopBar/StatusPanel"]
+layout_mode = 0
+offset_left = 263.0
+offset_top = 17.0
+offset_right = 310.0
+offset_bottom = 52.0
+theme_override_colors/font_color = Color(0.95, 0.97, 1, 1)
+theme_override_font_sizes/font_size = 24
+text = "0/3"
+
+[node name="CoinIcon" type="Label" parent="GameUI/TopBar/StatusPanel"]
+layout_mode = 0
+offset_left = 322.0
+offset_top = 14.0
+offset_right = 350.0
+offset_bottom = 51.0
+theme_override_colors/font_color = Color(1, 0.78, 0.12, 1)
+theme_override_font_sizes/font_size = 28
+text = "●"
+
+[node name="CoinLabel" type="Label" parent="GameUI/TopBar/StatusPanel"]
+layout_mode = 0
+offset_left = 358.0
+offset_top = 17.0
+offset_right = 398.0
+offset_bottom = 52.0
+theme_override_colors/font_color = Color(0.95, 0.97, 1, 1)
+theme_override_font_sizes/font_size = 24
+text = "0"
+
+[node name="btnSave" type="Button" parent="GameUI/TopBar"]
+layout_mode = 0
+offset_left = 450.0
+offset_top = 18.0
+offset_right = 510.0
+offset_bottom = 78.0
+focus_mode = 0
+icon = ExtResource("9_save")
+flat = true
+
+[node name="btnSound" type="Button" parent="GameUI/TopBar"]
+layout_mode = 0
+offset_left = 520.0
+offset_top = 18.0
+offset_right = 580.0
+offset_bottom = 78.0
 focus_mode = 0
 flat = true
 
-[node name="on" type="Sprite2D" parent="GameUI/TopBar/btnMusic" unique_id=1371475802]
-position = Vector2(5, 5)
-texture = ExtResource("7_r4nak")
-centered = false
-
-[node name="mute" type="Sprite2D" parent="GameUI/TopBar/btnMusic" unique_id=2050570364]
-position = Vector2(23, 24.999998)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("8_nvrsl")
-centered = false
-
-[node name="btnExit" parent="GameUI/TopBar" unique_id=1633606001 instance=ExtResource("14_b47np")]
+[node name="on" type="TextureRect" parent="GameUI/TopBar/btnSound"]
 layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -105.0
-offset_top = 10.0
-offset_right = -32.0
-offset_bottom = 64.0
-grow_horizontal = 0
-theme_override_font_sizes/font_size = 24
-text = "Exit"
-flat = true
-is_play_again = false
-
-[node name="BottomBar" type="ColorRect" parent="GameUI" unique_id=1990197770]
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -103.0
-grow_horizontal = 2
-grow_vertical = 0
-color = Color(0, 0.011764706, 0, 0.28235295)
-
-[node name="btnLeft" type="Button" parent="GameUI/BottomBar" unique_id=755149458]
-layout_mode = 0
-offset_left = 32.0
-offset_top = 10.0
-offset_right = 134.0
-offset_bottom = 99.0
-focus_mode = 0
-icon = ExtResource("8_fouhp")
-flat = true
-
-[node name="btnUp" type="Button" parent="GameUI/BottomBar" unique_id=1894149077]
-layout_mode = 0
-offset_left = 915.0
-offset_top = 11.0
-offset_right = 1018.0
-offset_bottom = 100.0
-focus_mode = 0
-icon = ExtResource("9_qi3vf")
-flat = true
-
-[node name="btnRight" type="Button" parent="GameUI/BottomBar" unique_id=605126403]
-layout_mode = 0
-offset_left = 168.0
-offset_top = 7.0
-offset_right = 271.0
-offset_bottom = 96.0
-focus_mode = 0
-icon = ExtResource("10_ioybj")
-flat = true
-
-[node name="btnShoot" type="Button" parent="GameUI/BottomBar" unique_id=235653240]
-layout_mode = 0
-offset_left = 997.0
-offset_top = 5.0
-offset_right = 1101.0
-offset_bottom = 99.0
-focus_mode = 0
-icon = ExtResource("14_v3j5j")
-flat = true
-expand_icon = true
-
-[node name="AlertLabel" type="Label" parent="GameUI/BottomBar" unique_id=1518313051]
-visible = false
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -19.0
-offset_top = -11.5
-offset_right = 19.0
-offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("4_fjdxc")
+texture = ExtResource("2_audio")
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+[node name="mute" type="TextureRect" parent="GameUI/TopBar/btnSound"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_mute")
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+[node name="btnMusic" type="Button" parent="GameUI/TopBar"]
+layout_mode = 0
+offset_left = 590.0
+offset_top = 18.0
+offset_right = 650.0
+offset_bottom = 78.0
+focus_mode = 0
+flat = true
+
+[node name="on" type="TextureRect" parent="GameUI/TopBar/btnMusic"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_music")
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+[node name="mute" type="TextureRect" parent="GameUI/TopBar/btnMusic"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_mute")
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+[node name="btnExit" type="Button" parent="GameUI/TopBar"]
+layout_mode = 0
+offset_left = 660.0
+offset_top = 18.0
+offset_right = 735.0
+offset_bottom = 78.0
+focus_mode = 0
+theme_override_colors/font_color = Color(0.95, 0.95, 0.98, 1)
+theme_override_font_sizes/font_size = 20
+text = "EXIT"
+flat = true
+
+[node name="BottomBar" type="Control" parent="GameUI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="btnLeft" type="Button" parent="GameUI/BottomBar"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 560.0
+offset_right = 145.0
+offset_bottom = 670.0
+focus_mode = 0
+icon = ExtResource("5_left")
+flat = false
+expand_icon = true
+theme_override_styles/normal = SubResource("ButtonNormal")
+theme_override_styles/hover = SubResource("ButtonHover")
+theme_override_styles/pressed = SubResource("ButtonPressed")
+
+[node name="btnRight" type="Button" parent="GameUI/BottomBar"]
+layout_mode = 0
+offset_left = 165.0
+offset_top = 560.0
+offset_right = 275.0
+offset_bottom = 670.0
+focus_mode = 0
+icon = ExtResource("7_right")
+flat = false
+expand_icon = true
+theme_override_styles/normal = SubResource("ButtonNormal")
+theme_override_styles/hover = SubResource("ButtonHover")
+theme_override_styles/pressed = SubResource("ButtonPressed")
+
+[node name="btnShoot" type="Button" parent="GameUI/BottomBar"]
+layout_mode = 0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -285.0
+offset_top = 530.0
+offset_right = -175.0
+offset_bottom = 640.0
+grow_horizontal = 0
+focus_mode = 0
+icon = ExtResource("8_shoot")
+flat = false
+expand_icon = true
+theme_override_styles/normal = SubResource("ButtonNormal")
+theme_override_styles/hover = SubResource("ButtonHover")
+theme_override_styles/pressed = SubResource("ButtonPressed")
+
+[node name="btnUp" type="Button" parent="GameUI/BottomBar"]
+layout_mode = 0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -150.0
+offset_top = 450.0
+offset_right = -40.0
+offset_bottom = 560.0
+grow_horizontal = 0
+focus_mode = 0
+icon = ExtResource("6_up")
+flat = false
+expand_icon = true
+theme_override_styles/normal = SubResource("ButtonNormal")
+theme_override_styles/hover = SubResource("ButtonHover")
+theme_override_styles/pressed = SubResource("ButtonPressed")
+
+[node name="EnergyBar" type="ProgressBar" parent="GameUI"]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 625.0
+offset_right = 800.0
+offset_bottom = 675.0
+value = 100.0
+show_percentage = false
+theme_override_styles/background = SubResource("EnergyBG")
+theme_override_styles/fill = SubResource("EnergyFill")
+
+[node name="EnergyIcon" type="Label" parent="GameUI/EnergyBar"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 4.0
+offset_right = 42.0
+offset_bottom = 43.0
+theme_override_colors/font_color = Color(0.1, 0.9, 1, 1)
+theme_override_font_sizes/font_size = 28
+text = "ϟ"
+mouse_filter = 2
+
+[node name="EnergyLabel" type="Label" parent="GameUI/EnergyBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.8)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 20
+text = "100/100"
+horizontal_alignment = 1
+vertical_alignment = 1
+mouse_filter = 2
+
+[node name="AlertLabel" type="Label" parent="GameUI/BottomBar"]
+visible = false
+layout_mode = 0
+offset_left = 480.0
+offset_top = 300.0
+offset_right = 720.0
+offset_bottom = 350.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 24
 text = "Alert"
+horizontal_alignment = 1
 
 [connection signal="pressed" from="GameUI/TopBar/btnSave" to="." method="_on_btn_save_pressed"]
 [connection signal="pressed" from="GameUI/TopBar/btnSound" to="." method="_on_btn_sound_pressed"]
 [connection signal="pressed" from="GameUI/TopBar/btnMusic" to="." method="_on_btn_music_pressed"]
+[connection signal="pressed" from="GameUI/TopBar/btnExit" to="." method="_on_btn_exit_pressed"]
 [connection signal="button_down" from="GameUI/BottomBar/btnLeft" to="." method="_on_btn_left_pressed"]
 [connection signal="button_up" from="GameUI/BottomBar/btnLeft" to="." method="_on_btn_left_released"]
 [connection signal="button_down" from="GameUI/BottomBar/btnUp" to="." method="_on_btn_up_pressed"]
