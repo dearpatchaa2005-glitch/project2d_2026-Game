@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bvvj7n5h7vwa0" path="res://Assets/Icons/Gemini_Generated_Image_8sgxth8sgxth8sgx.png" id="1_4nn8d"]
 [ext_resource type="Texture2D" uid="uid://1ay25i0wdihg" path="res://Assets/Icons/cpkku_dark.png" id="2_fnvqj"]
 [ext_resource type="PackedScene" uid="uid://puc4l62gx6et" path="res://Scenes/Prefabs/button_exit.tscn" id="3_fnvqj"]
+[ext_resource type="PackedScene" uid="uid://b6tvaxw54wsq0" path="res://Scenes/Levels/menu.tscn" id="5_0lh7m"]
 
 [node name="Node2D" type="Node2D" unique_id=264957255]
 
@@ -68,6 +69,8 @@ offset_left = 33.0
 offset_top = 0.0
 offset_right = 159.0
 offset_bottom = 54.0
+exitToScene = ExtResource("5_0lh7m")
+is_play_again = false
 
 [node name="Title3" type="Label" parent="Control" unique_id=1657901293]
 layout_mode = 1
