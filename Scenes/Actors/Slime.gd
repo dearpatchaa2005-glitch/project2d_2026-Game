@@ -81,8 +81,11 @@ func movement():
 		if Input.is_action_pressed("Right"):
 			velocity.x = move_speed
 			flip_x = false
-	if velocity.y > 5000:
+	# Falling out of the level counts as one trap hit, with the same
+	# temporary invulnerability as other traps.
+	if velocity.y > 5000 and can_damage:
 		hit_trap.emit()
+		damage_tween()
 	move_and_slide()
 
 # Handles jumping functionality (double jump or single jump, can be toggled from inspector)
@@ -180,8 +183,11 @@ func _apply_enemy_damage(body) -> void:
 
 # Reset the player's position to the current level spawn point if collided with any trap
 func _on_collision_body_entered(body):
-	if body.is_in_group("Traps"):
+	if body.is_in_group("Traps") and can_damage:
+		# Every trap hit costs exactly one heart.
 		hit_trap.emit()
+		damage_tween()
+		return
 	if body.is_in_group("Enemy") and can_damage:
 		_apply_enemy_damage(body)
 

@@ -15,7 +15,8 @@ func _on_player_hit_enemy() -> void:
 	GameManager.damage(1)    # หัก 1 หัวใจ
 
 func _on_player_hit_trap() -> void:
-	GameManager.death()
+	# Traps now remove exactly one heart instead of instantly killing the player.
+	GameManager.damage(1)
 
 
 func _on_music_player_finished() -> void:
