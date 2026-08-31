@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bjntpxb1c8jxn" path="res://Scenes/Levels/base_level.tscn" id="1"]
 [ext_resource type="Script" uid="uid://d1cqsipid3w2o" path="res://Scenes/Levels/level_04.gd" id="2"]
 [ext_resource type="PackedScene" path="res://Scenes/Actors/crystal_overlord.tscn" id="3"]
+[ext_resource type="AudioStream" uid="uid://brfo2sr00p0rt" path="res://Assets/Sound/giant_steps_ver.3_without_artifact.mp3" id="3_g54kh"]
 
 [sub_resource type="RectangleShape2D" id="floor"]
 size = Vector2(1600, 160)
@@ -22,6 +23,9 @@ offset_top = -51.0
 offset_right = 617.0
 offset_bottom = 28.0
 text = "Level 4 CRYSTAL OVERLORD"
+
+[node name="MusicPlayer" parent="." index="7" unique_id=724032201]
+stream = ExtResource("3_g54kh")
 
 [node name="Floor" type="StaticBody2D" parent="." index="8" unique_id=204546998]
 collision_mask = 2
