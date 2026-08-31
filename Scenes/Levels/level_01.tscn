@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://byjorg5a1yjeq" path="res://Assets/iii/37fc1015-c01e-4cbb-bdf3-5a78422ce425-removebg-preview.png" id="8_uvcnl"]
 [ext_resource type="Texture2D" uid="uid://bes1od2rk6g4y" path="res://Assets/iii/edf38879-f4cc-43e0-8c2b-878c5eb7325e-removebg-preview.png" id="9_6ag6h"]
 [ext_resource type="PackedScene" uid="uid://ek7hxkqp2wff" path="res://Scenes/Actors/Slime.tscn" id="13_ge2ro"]
+[ext_resource type="AudioStream" uid="uid://brfo2sr00p0rt" path="res://Assets/Sound/giant_steps_ver.3_without_artifact.mp3" id="14_flehy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xrivr"]
 size = Vector2(371, 245.5)
@@ -265,3 +266,6 @@ offset_right = 1242.0
 offset_bottom = 305.0
 theme = ExtResource("6_taws2")
 text = "เข้าประตูเพื่อไปด่านต่อไป"
+
+[node name="MusicPlayer" parent="." index="7" unique_id=724032201]
+stream = ExtResource("14_flehy")

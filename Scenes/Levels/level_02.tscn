@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cixfggwd65ags" path="res://Assets/iii/ce2fedd1-22e4-481c-860a-609f260df9da-removebg-preview.png" id="6_273s6"]
 [ext_resource type="Texture2D" uid="uid://dx5cid5gafeqm" path="res://Assets/iii/c87b0681-e2d3-43a9-b218-d473c76dc88d-removebg-preview.png" id="7_rrj2r"]
 [ext_resource type="Texture2D" uid="uid://bnwd0fplaglxr" path="res://Assets/iii/bb4bff4b-f518-4890-b484-422fb7c12f43-removebg-preview.png" id="8_bli80"]
+[ext_resource type="AudioStream" uid="uid://brfo2sr00p0rt" path="res://Assets/Sound/giant_steps_ver.3_without_artifact.mp3" id="10_r71vb"]
 [ext_resource type="PackedScene" uid="uid://bfmh3fm2de78o" path="res://Scenes/Prefabs/coin.tscn" id="11_28b8s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xrivr"]
@@ -131,6 +132,9 @@ text = "Level 2 ถ้ำมืด "
 
 [node name="Text" parent="." index="6" unique_id=416249055]
 position = Vector2(175, 205)
+
+[node name="MusicPlayer" parent="." index="7" unique_id=724032201]
+stream = ExtResource("10_r71vb")
 
 [node name="Enemy2" parent="." index="8" unique_id=531434313 instance=ExtResource("5_x41uu")]
 position = Vector2(246, 454)

@@ -60,7 +60,7 @@ func shoot_fireball() -> void:
 	var fireball = fireball_scene.instantiate()
 	get_tree().current_scene.add_child(fireball)
 	fireball.global_position = global_position + Vector2(-48 if player.global_position.x < global_position.x else 48, -55)
-	var direction := (player.global_position - fireball.global_position).normalized()
+	var direction: Vector2 = (player.global_position - fireball.global_position).normalized()
 	if fireball.has_method("setup"):
 		fireball.setup(direction, 300.0 if phase == 1 else 390.0)
 
