@@ -10,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://2wfiy300hbbt" path="res://Assets/Icons/icons8-save-50.png" id="9_save"]
 [ext_resource type="Texture2D" uid="uid://c14r70talvlty" path="res://Assets/Icons/icons8-arrow-left-50.png" id="10_left"]
 [ext_resource type="Texture2D" uid="uid://cs52s37v04q41" path="res://Assets/Icons/icons8-heart-48.png" id="11_heart"]
+[ext_resource type="Texture2D" uid="uid://csuibm1i8sclf" path="res://Scenes/Levels/images.png" id="11_kl54v"]
+[ext_resource type="Texture2D" uid="uid://eobc0ebxc5qc" path="res://Scenes/Levels/pngtree-glossy-golden-coin-icon-png-image_2898883.png" id="12_432dq"]
 
 [sub_resource type="StyleBoxFlat" id="Panel"]
 bg_color = Color(0.035, 0.055, 0.075, 0.94)
@@ -169,16 +171,6 @@ offset_right = 212.0
 offset_bottom = 58.0
 color = Color(0.3, 0.33, 0.37, 0.8)
 
-[node name="CrystalIcon" type="Label" parent="GameUI/TopBar/StatusPanel" unique_id=1725344237]
-layout_mode = 0
-offset_left = 226.0
-offset_top = 14.0
-offset_right = 257.0
-offset_bottom = 51.0
-theme_override_colors/font_color = Color(0.25, 0.75, 1, 1)
-theme_override_font_sizes/font_size = 30
-text = "♦"
-
 [node name="CrystalLabel" type="Label" parent="GameUI/TopBar/StatusPanel" unique_id=1695292240]
 layout_mode = 0
 offset_left = 263.0
@@ -188,16 +180,6 @@ offset_bottom = 52.0
 theme_override_colors/font_color = Color(0.95, 0.97, 1, 1)
 theme_override_font_sizes/font_size = 24
 text = "0/3"
-
-[node name="CoinIcon" type="Label" parent="GameUI/TopBar/StatusPanel" unique_id=1756170612]
-layout_mode = 0
-offset_left = 322.0
-offset_top = 14.0
-offset_right = 350.0
-offset_bottom = 51.0
-theme_override_colors/font_color = Color(1, 0.78, 0.12, 1)
-theme_override_font_sizes/font_size = 28
-text = "●"
 
 [node name="CoinLabel" type="Label" parent="GameUI/TopBar/StatusPanel" unique_id=762509763]
 layout_mode = 0
@@ -421,6 +403,16 @@ theme_override_font_sizes/font_size = 20
 text = "100/100"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Images" type="Sprite2D" parent="." unique_id=334496108]
+position = Vector2(233.99998, 55)
+scale = Vector2(0.13596494, 0.13688944)
+texture = ExtResource("11_kl54v")
+
+[node name="PngtreeGlossyGoldenCoinIconPngImage2898884" type="Sprite2D" parent="." unique_id=1629954265]
+position = Vector2(344, 51)
+scale = Vector2(0.21944447, 0.19166663)
+texture = ExtResource("12_432dq")
 
 [connection signal="pressed" from="GameUI/TopBar/btnSave" to="." method="_on_btn_save_pressed"]
 [connection signal="pressed" from="GameUI/TopBar/btnSound" to="." method="_on_btn_sound_pressed"]

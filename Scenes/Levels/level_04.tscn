@@ -51,7 +51,7 @@ stream = ExtResource("3_g54kh")
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" index="0" unique_id=908389430]
-position = Vector2(750, 575)
+position = Vector2(750, 685)
 shape = SubResource("floor")
 
 [node name="Platform1" type="StaticBody2D" parent="." index="9" unique_id=607910533]
