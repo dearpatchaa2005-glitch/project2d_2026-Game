@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://lo7nx5ohks0b" path="res://Assets/iii/Gemini_Generated_Image_pbpbyzpbpbyzpbpb.png" id="3_vuwp0"]
 [ext_resource type="Texture2D" uid="uid://bqrup5yk0o64p" path="res://Scenes/Prefabs/a2f9059e-c245-460a-a0b4-040b926a5109-removebg-preview.png" id="5_3juvj"]
 [ext_resource type="Texture2D" uid="uid://bvboktebt105i" path="res://Scenes/Prefabs/a0bd056d-30dc-4c93-80ed-302cd2a75a11-removebg-preview.png" id="6_oabfo"]
+[ext_resource type="PackedScene" uid="uid://bfmh3fm2de78o" path="res://Scenes/Prefabs/coin.tscn" id="7_oabfo"]
 
 [sub_resource type="RectangleShape2D" id="floor"]
 size = Vector2(1600, 160)
@@ -24,7 +25,7 @@ size = Vector2(113, 61.000008)
 script = ExtResource("2")
 
 [node name="LevelFinishDoor" parent="." index="0" unique_id=1788542095]
-position = Vector2(1115, 374)
+position = Vector2(1125, 361)
 
 [node name="Sprite2D" type="Sprite2D" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="2" unique_id=1113257558]
 z_index = -1
@@ -90,9 +91,24 @@ position = Vector2(869.6091, 404.75)
 scale = Vector2(1.0272727, 1.0272727)
 texture = ExtResource("6_oabfo")
 
+[node name="Coin" parent="Platform3" index="2" unique_id=251510796 instance=ExtResource("7_oabfo")]
+position = Vector2(866, 244)
+
+[node name="Coin2" parent="Platform3" index="3" unique_id=968845259 instance=ExtResource("7_oabfo")]
+position = Vector2(899, 257)
+
+[node name="Coin3" parent="Platform3" index="4" unique_id=1044706174 instance=ExtResource("7_oabfo")]
+position = Vector2(866, 285)
+
+[node name="Coin4" parent="Platform3" index="5" unique_id=1977990897 instance=ExtResource("7_oabfo")]
+position = Vector2(359, 260)
+
+[node name="Coin5" parent="Platform3" index="6" unique_id=1545312392 instance=ExtResource("7_oabfo")]
+position = Vector2(359, 298)
+
 [node name="Boss" parent="." index="12" unique_id=818856186 instance=ExtResource("3")]
 self_modulate = Color(1, 1, 1, 0)
-position = Vector2(730, 505)
+position = Vector2(714, 508)
 
 [node name="BossUI" type="CanvasLayer" parent="." index="13" unique_id=1733267496]
 
