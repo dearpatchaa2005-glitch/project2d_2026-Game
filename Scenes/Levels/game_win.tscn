@@ -2,6 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://d3eng5cvycmjf" path="res://Scenes/Prefabs/theme.tres" id="1_5l1gm"]
 [ext_resource type="PackedScene" uid="uid://puc4l62gx6et" path="res://Scenes/Prefabs/button_exit.tscn" id="2_81byk"]
+[ext_resource type="PackedScene" uid="uid://b6tvaxw54wsq0" path="res://Scenes/Levels/menu.tscn" id="3_5l1gm"]
 
 [node name="GameOver" type="Node2D" unique_id=826370530]
 
@@ -25,6 +26,7 @@ offset_top = 337.0
 offset_right = 540.0
 offset_bottom = 391.0
 text = "Exit to Menu"
+exitToScene = ExtResource("3_5l1gm")
 
 [node name="btnPlay" parent="." unique_id=1146872882 instance=ExtResource("2_81byk")]
 offset_left = 618.0

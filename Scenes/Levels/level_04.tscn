@@ -2,58 +2,114 @@
 
 [ext_resource type="PackedScene" uid="uid://bjntpxb1c8jxn" path="res://Scenes/Levels/base_level.tscn" id="1"]
 [ext_resource type="Script" uid="uid://d1cqsipid3w2o" path="res://Scenes/Levels/level_04.gd" id="2"]
-[ext_resource type="PackedScene" path="res://Scenes/Actors/crystal_overlord.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://bln5qd3071lgm" path="res://Scenes/Actors/crystal_overlord.tscn" id="3"]
+[ext_resource type="AudioStream" uid="uid://brfo2sr00p0rt" path="res://Assets/Sound/giant_steps_ver.3_without_artifact.mp3" id="3_g54kh"]
+[ext_resource type="Texture2D" uid="uid://lo7nx5ohks0b" path="res://Assets/iii/Gemini_Generated_Image_pbpbyzpbpbyzpbpb.png" id="3_vuwp0"]
+[ext_resource type="Texture2D" uid="uid://bqrup5yk0o64p" path="res://Scenes/Prefabs/a2f9059e-c245-460a-a0b4-040b926a5109-removebg-preview.png" id="5_3juvj"]
+[ext_resource type="Texture2D" uid="uid://bvboktebt105i" path="res://Scenes/Prefabs/a0bd056d-30dc-4c93-80ed-302cd2a75a11-removebg-preview.png" id="6_oabfo"]
+[ext_resource type="PackedScene" uid="uid://bfmh3fm2de78o" path="res://Scenes/Prefabs/coin.tscn" id="7_oabfo"]
 
 [sub_resource type="RectangleShape2D" id="floor"]
 size = Vector2(1600, 160)
 
 [sub_resource type="RectangleShape2D" id="p1"]
-size = Vector2(220, 24)
+size = Vector2(114.00003, 147)
 
 [sub_resource type="RectangleShape2D" id="p2"]
-size = Vector2(250, 24)
+size = Vector2(98, 216.00003)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_duqtl"]
+size = Vector2(113, 61.000008)
 
 [node name="BaseLevel" unique_id=1969139540 instance=ExtResource("1")]
 script = ExtResource("2")
 
+[node name="LevelFinishDoor" parent="." index="0" unique_id=1788542095]
+position = Vector2(1092, 430)
+
+[node name="Sprite2D" type="Sprite2D" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="2" unique_id=1113257558]
+z_index = -1
+position = Vector2(603.3114, 325.36398)
+scale = Vector2(0.7883434, 0.92794305)
+texture = ExtResource("3_vuwp0")
+metadata/_edit_lock_ = true
+
+[node name="Player" parent="." index="2" unique_id=850213228]
+position = Vector2(70.999985, 483.99994)
+
 [node name="Label" parent="UserInterface" parent_id_path=PackedInt32Array(1799764374) index="1" unique_id=1103718868]
-offset_left = -278.0
-offset_top = -51.0
-offset_right = 617.0
-offset_bottom = 28.0
+offset_left = -336.0
+offset_top = -62.0
+offset_right = 559.0
+offset_bottom = 17.0
 text = "Level 4 CRYSTAL OVERLORD"
+
+[node name="MusicPlayer" parent="." index="7" unique_id=724032201]
+stream = ExtResource("3_g54kh")
 
 [node name="Floor" type="StaticBody2D" parent="." index="8" unique_id=204546998]
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" index="0" unique_id=908389430]
-position = Vector2(800, 620)
+position = Vector2(750, 575)
 shape = SubResource("floor")
 
 [node name="Platform1" type="StaticBody2D" parent="." index="9" unique_id=607910533]
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform1" index="0" unique_id=1541527501]
-position = Vector2(380, 425)
+[node name="Sprite2D" type="Sprite2D" parent="Platform1" index="0" unique_id=1343572213]
+position = Vector2(357.5, 495)
+scale = Vector2(1.2232143, 0.91463417)
+texture = ExtResource("5_3juvj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform1" index="1" unique_id=1541527501]
+position = Vector2(355.00003, 492.5)
+scale = Vector2(0.9999998, 0.99999964)
 shape = SubResource("p1")
 
 [node name="Platform2" type="StaticBody2D" parent="." index="10" unique_id=1204546556]
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2" index="0" unique_id=1165794159]
-position = Vector2(756, 316)
+[node name="Sprite2D" type="Sprite2D" parent="Platform2" index="0" unique_id=1679220278]
+position = Vector2(507, 469)
+scale = Vector2(1, 1.3414634)
+texture = ExtResource("5_3juvj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2" index="1" unique_id=1165794159]
+position = Vector2(503, 467)
 shape = SubResource("p2")
 
 [node name="Platform3" type="StaticBody2D" parent="." index="11" unique_id=160766904]
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3" index="0" unique_id=611244314]
-position = Vector2(1155, 450)
-shape = SubResource("p2")
+position = Vector2(871.5, 394.5)
+shape = SubResource("RectangleShape2D_duqtl")
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform3" index="1" unique_id=1896533337]
+position = Vector2(869.6091, 404.75)
+scale = Vector2(1.0272727, 1.0272727)
+texture = ExtResource("6_oabfo")
+
+[node name="Coin" parent="Platform3" index="2" unique_id=251510796 instance=ExtResource("7_oabfo")]
+position = Vector2(866, 244)
+
+[node name="Coin2" parent="Platform3" index="3" unique_id=968845259 instance=ExtResource("7_oabfo")]
+position = Vector2(899, 257)
+
+[node name="Coin3" parent="Platform3" index="4" unique_id=1044706174 instance=ExtResource("7_oabfo")]
+position = Vector2(866, 285)
+
+[node name="Coin4" parent="Platform3" index="5" unique_id=1977990897 instance=ExtResource("7_oabfo")]
+position = Vector2(359, 260)
+
+[node name="Coin5" parent="Platform3" index="6" unique_id=1545312392 instance=ExtResource("7_oabfo")]
+position = Vector2(359, 298)
 
 [node name="Boss" parent="." index="12" unique_id=818856186 instance=ExtResource("3")]
 self_modulate = Color(1, 1, 1, 0)
-position = Vector2(755, 462)
+position = Vector2(728, 410)
+max_health = 10
 
 [node name="BossUI" type="CanvasLayer" parent="." index="13" unique_id=1733267496]
 
@@ -72,18 +128,10 @@ offset_top = 81.0
 offset_right = 1203.0
 offset_bottom = 109.0
 theme_override_font_sizes/font_size = 20
-text = "CRYSTAL OVERLORD   40 / 40"
+text = "CRYSTAL OVERLORD   10 / 10"
 horizontal_alignment = 1
 
-[node name="Title" type="Label" parent="BossUI" index="2" unique_id=1641999014]
-offset_left = -106.0
-offset_top = -143.0
-offset_right = 374.0
-offset_bottom = -108.0
-theme_override_font_sizes/font_size = 22
-text = "LEVEL 4 • CRYSTAL OVERLORD"
-
-[node name="Hint" type="Label" parent="BossUI" index="3" unique_id=1349006324]
+[node name="Hint" type="Label" parent="BossUI" index="2" unique_id=1349006324]
 offset_left = 560.0
 offset_top = 660.0
 offset_right = 1040.0
