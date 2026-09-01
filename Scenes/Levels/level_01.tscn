@@ -228,13 +228,13 @@ collision_mask = 9
 
 [node name="Enemy3" parent="Enemies" parent_id_path=PackedInt32Array(1580630701) index="1" unique_id=600502477 instance=ExtResource("7_mb1if")]
 position = Vector2(-270, 678)
-rotation = -0.69608235
+rotation = -0.0074393153
 collision_mask = 9
 
 [node name="Enemy" parent="Enemies" parent_id_path=PackedInt32Array(1580630701) index="2" unique_id=47849255 instance=ExtResource("13_ge2ro")]
 position = Vector2(-714, 673)
 
-[node name="Label" parent="UserInterface" parent_id_path=PackedInt32Array(1799764374) index="1" unique_id=1103718868]
+[node name="Label" parent="UserInterface" parent_id_path=PackedInt32Array(1799764374) index="3" unique_id=1103718868]
 anchors_preset = -1
 anchor_top = 0.577
 anchor_bottom = 0.577
