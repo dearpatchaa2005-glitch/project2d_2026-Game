@@ -2,7 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://bjntpxb1c8jxn" path="res://Scenes/Levels/base_level.tscn" id="1"]
 [ext_resource type="Script" uid="uid://d1cqsipid3w2o" path="res://Scenes/Levels/level_04.gd" id="2"]
+<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://bln5qd3071lgm" path="res://Scenes/Actors/crystal_overlord.tscn" id="3"]
+=======
+[ext_resource type="PackedScene" path="res://Scenes/Actors/crystal_overlord.tscn" id="3"]
+>>>>>>> 6ef5e640623b3e0313d08530fbe9792ff0112d6c
 [ext_resource type="AudioStream" uid="uid://brfo2sr00p0rt" path="res://Assets/Sound/giant_steps_ver.3_without_artifact.mp3" id="3_g54kh"]
 [ext_resource type="Texture2D" uid="uid://lo7nx5ohks0b" path="res://Assets/iii/Gemini_Generated_Image_pbpbyzpbpbyzpbpb.png" id="3_vuwp0"]
 [ext_resource type="Texture2D" uid="uid://bqrup5yk0o64p" path="res://Scenes/Prefabs/a2f9059e-c245-460a-a0b4-040b926a5109-removebg-preview.png" id="5_3juvj"]
@@ -25,7 +29,11 @@ size = Vector2(113, 61.000008)
 script = ExtResource("2")
 
 [node name="LevelFinishDoor" parent="." index="0" unique_id=1788542095]
+<<<<<<< HEAD
 position = Vector2(1092, 430)
+=======
+position = Vector2(1125, 361)
+>>>>>>> 6ef5e640623b3e0313d08530fbe9792ff0112d6c
 
 [node name="Sprite2D" type="Sprite2D" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="2" unique_id=1113257558]
 z_index = -1
@@ -35,7 +43,11 @@ texture = ExtResource("3_vuwp0")
 metadata/_edit_lock_ = true
 
 [node name="Player" parent="." index="2" unique_id=850213228]
+<<<<<<< HEAD
 position = Vector2(70.999985, 483.99994)
+=======
+position = Vector2(105, 522)
+>>>>>>> 6ef5e640623b3e0313d08530fbe9792ff0112d6c
 
 [node name="Label" parent="UserInterface" parent_id_path=PackedInt32Array(1799764374) index="1" unique_id=1103718868]
 offset_left = -336.0
@@ -108,8 +120,12 @@ position = Vector2(359, 298)
 
 [node name="Boss" parent="." index="12" unique_id=818856186 instance=ExtResource("3")]
 self_modulate = Color(1, 1, 1, 0)
+<<<<<<< HEAD
 position = Vector2(728, 410)
 max_health = 10
+=======
+position = Vector2(714, 508)
+>>>>>>> 6ef5e640623b3e0313d08530fbe9792ff0112d6c
 
 [node name="BossUI" type="CanvasLayer" parent="." index="13" unique_id=1733267496]
 
