@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://d1cqsipid3w2o" path="res://Scenes/Levels/level_04.gd" id="2"]
 [ext_resource type="PackedScene" path="res://Scenes/Actors/crystal_overlord.tscn" id="3"]
 [ext_resource type="AudioStream" uid="uid://brfo2sr00p0rt" path="res://Assets/Sound/giant_steps_ver.3_without_artifact.mp3" id="3_g54kh"]
+[ext_resource type="Texture2D" uid="uid://lo7nx5ohks0b" path="res://Assets/iii/Gemini_Generated_Image_pbpbyzpbpbyzpbpb.png" id="3_vuwp0"]
 
 [sub_resource type="RectangleShape2D" id="floor"]
 size = Vector2(1600, 160)
@@ -17,7 +18,14 @@ size = Vector2(250, 24)
 [node name="BaseLevel" unique_id=1969139540 instance=ExtResource("1")]
 script = ExtResource("2")
 
-[node name="Sprite2D" type="Sprite2D" parent="Level/Background1" parent_id_path=PackedInt32Array(1072429833) index="0" unique_id=1113257558]
+[node name="LevelFinishDoor" parent="." index="0" unique_id=1788542095]
+position = Vector2(1128, 366)
+
+[node name="Sprite2D" type="Sprite2D" parent="Level" parent_id_path=PackedInt32Array(1752500785) index="2" unique_id=1113257558]
+z_index = -1
+position = Vector2(600, 333.364)
+scale = Vector2(0.78401196, 0.9506704)
+texture = ExtResource("3_vuwp0")
 
 [node name="Label" parent="UserInterface" parent_id_path=PackedInt32Array(1799764374) index="1" unique_id=1103718868]
 offset_left = -278.0
@@ -33,7 +41,7 @@ stream = ExtResource("3_g54kh")
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" index="0" unique_id=908389430]
-position = Vector2(800, 620)
+position = Vector2(802, 639)
 shape = SubResource("floor")
 
 [node name="Platform1" type="StaticBody2D" parent="." index="9" unique_id=607910533]
@@ -54,12 +62,12 @@ shape = SubResource("p2")
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3" index="0" unique_id=611244314]
-position = Vector2(1155, 450)
+position = Vector2(1078, 424)
 shape = SubResource("p2")
 
 [node name="Boss" parent="." index="12" unique_id=818856186 instance=ExtResource("3")]
 self_modulate = Color(1, 1, 1, 0)
-position = Vector2(755, 462)
+position = Vector2(760, 486)
 
 [node name="BossUI" type="CanvasLayer" parent="." index="13" unique_id=1733267496]
 
@@ -81,15 +89,7 @@ theme_override_font_sizes/font_size = 20
 text = "CRYSTAL OVERLORD   40 / 40"
 horizontal_alignment = 1
 
-[node name="Title" type="Label" parent="BossUI" index="2" unique_id=1641999014]
-offset_left = -106.0
-offset_top = -143.0
-offset_right = 374.0
-offset_bottom = -108.0
-theme_override_font_sizes/font_size = 22
-text = "LEVEL 4 • CRYSTAL OVERLORD"
-
-[node name="Hint" type="Label" parent="BossUI" index="3" unique_id=1349006324]
+[node name="Hint" type="Label" parent="BossUI" index="2" unique_id=1349006324]
 offset_left = 560.0
 offset_top = 660.0
 offset_right = 1040.0
