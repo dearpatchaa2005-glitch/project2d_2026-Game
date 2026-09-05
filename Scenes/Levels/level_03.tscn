@@ -180,12 +180,22 @@ shape = SubResource("RectangleShape2D_5qict")
 [node name="Player" parent="." index="2" unique_id=850213228]
 position = Vector2(73, 373)
 
-[node name="Label" parent="UserInterface" parent_id_path=PackedInt32Array(1799764374) index="1" unique_id=1103718868]
+[node name="Label" parent="UserInterface" parent_id_path=PackedInt32Array(1799764374) index="3" unique_id=1103718868]
 text = "Level 3  ถ้ำคริสตัล
 "
 
 [node name="MusicPlayer" parent="." index="7" unique_id=724032201]
 stream = ExtResource("10_lshqn")
+
+[node name="Label" type="Label" parent="MusicPlayer" index="0" unique_id=1826108961]
+offset_left = 120.0
+offset_top = 170.0
+offset_right = 288.0
+offset_bottom = 271.0
+text = "ด่านที่3
+A D เพื่อเดิน
+Space กระโดด
+X  ยิงบอลไฟ กำจัด  สไลม์"
 
 [node name="Coin" parent="." index="8" unique_id=129373077 instance=ExtResource("8_5qict")]
 position = Vector2(482, 126)

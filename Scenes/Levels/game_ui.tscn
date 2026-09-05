@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://2wfiy300hbbt" path="res://Assets/Icons/icons8-save-50.png" id="9_save"]
 [ext_resource type="Texture2D" uid="uid://c14r70talvlty" path="res://Assets/Icons/icons8-arrow-left-50.png" id="10_left"]
 [ext_resource type="Texture2D" uid="uid://cs52s37v04q41" path="res://Assets/Icons/icons8-heart-48.png" id="11_heart"]
-[ext_resource type="Texture2D" uid="uid://csuibm1i8sclf" path="res://Scenes/Levels/images.png" id="11_kl54v"]
+[ext_resource type="Texture2D" uid="uid://j7u62jvwon6o" path="res://Scenes/Levels/images.png" id="11_kl54v"]
 [ext_resource type="Texture2D" uid="uid://eobc0ebxc5qc" path="res://Scenes/Levels/pngtree-glossy-golden-coin-icon-png-image_2898883.png" id="12_432dq"]
 
 [sub_resource type="StyleBoxFlat" id="Panel"]
@@ -405,13 +405,13 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Images" type="Sprite2D" parent="." unique_id=334496108]
-position = Vector2(233.99998, 55)
+position = Vector2(239.99997, 54.000004)
 scale = Vector2(0.13596494, 0.13688944)
 texture = ExtResource("11_kl54v")
 
 [node name="PngtreeGlossyGoldenCoinIconPngImage2898884" type="Sprite2D" parent="." unique_id=1629954265]
-position = Vector2(344, 51)
-scale = Vector2(0.21944447, 0.19166663)
+position = Vector2(351.75, 49.034817)
+scale = Vector2(0.20694445, 0.18074891)
 texture = ExtResource("12_432dq")
 
 [connection signal="pressed" from="GameUI/TopBar/btnSave" to="." method="_on_btn_save_pressed"]
