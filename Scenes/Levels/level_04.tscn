@@ -37,7 +37,7 @@ metadata/_edit_lock_ = true
 [node name="Player" parent="." index="2" unique_id=850213228]
 position = Vector2(70.999985, 483.99994)
 
-[node name="Label" parent="UserInterface" parent_id_path=PackedInt32Array(1799764374) index="1" unique_id=1103718868]
+[node name="Label" parent="UserInterface" parent_id_path=PackedInt32Array(1799764374) index="3" unique_id=1103718868]
 offset_left = -336.0
 offset_top = -62.0
 offset_right = 559.0
@@ -110,6 +110,16 @@ position = Vector2(359, 298)
 self_modulate = Color(1, 1, 1, 0)
 position = Vector2(728, 410)
 max_health = 10
+
+[node name="Label" type="Label" parent="Boss" index="2" unique_id=1605678367]
+offset_left = -651.0
+offset_top = -232.0
+offset_right = -481.099
+offset_bottom = -122.0
+text = "ด่านที่4
+A D เพื่อเดิน
+Space กระโดด
+X  ยิงBossใหญ่"
 
 [node name="BossUI" type="CanvasLayer" parent="." index="13" unique_id=1733267496]
 

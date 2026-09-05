@@ -127,7 +127,7 @@ shape = SubResource("RectangleShape2D_b1lj4")
 [node name="Player" parent="." index="2" unique_id=850213228]
 position = Vector2(54.999954, 462)
 
-[node name="Label" parent="UserInterface" parent_id_path=PackedInt32Array(1799764374) index="1" unique_id=1103718868]
+[node name="Label" parent="UserInterface" parent_id_path=PackedInt32Array(1799764374) index="3" unique_id=1103718868]
 text = "Level 2 ถ้ำมืด "
 
 [node name="Text" parent="." index="6" unique_id=416249055]
@@ -135,6 +135,16 @@ position = Vector2(175, 205)
 
 [node name="MusicPlayer" parent="." index="7" unique_id=724032201]
 stream = ExtResource("10_r71vb")
+
+[node name="Label" type="Label" parent="MusicPlayer" index="0" unique_id=783769800]
+offset_left = 23.0
+offset_top = 205.0
+offset_right = 191.0
+offset_bottom = 306.0
+text = "ด่านที่2
+A D เพื่อเดิน
+Space กระโดด
+X  ยิงบอลไฟ กำจัด  สไลม์"
 
 [node name="Enemy2" parent="." index="8" unique_id=531434313 instance=ExtResource("5_x41uu")]
 position = Vector2(246, 454)

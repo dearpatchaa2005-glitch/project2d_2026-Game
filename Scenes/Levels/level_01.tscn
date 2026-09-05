@@ -250,10 +250,10 @@ text = "Level 1 ป่าแห่งแสง"
 horizontal_alignment = 1
 
 [node name="Label" type="Label" parent="Text" parent_id_path=PackedInt32Array(416249055) index="0" unique_id=2000774536]
-offset_left = 40.0
-offset_top = 812.0
-offset_right = 382.0
-offset_bottom = 941.0
+offset_left = -1818.0
+offset_top = 576.0
+offset_right = -1476.0
+offset_bottom = 705.0
 theme = ExtResource("6_taws2")
 text = "ด่านที่1
 A D เพื่อเดิน
